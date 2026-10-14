@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subdomain Takeover PoC</title>
+  <style>
+    body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; background: #0f172a; color: #e2e8f0; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 40px 48px; max-width: 560px; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+    h1 { margin: 0 0 8px; font-size: 22px; color: #f8fafc; }
+    .tag { display: inline-block; background: #dc2626; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: .04em; }
+    p { line-height: 1.6; color: #cbd5e1; font-size: 14px; }
+    .meta { margin-top: 20px; padding-top: 16px; border-top: 1px solid #334155; font-size: 13px; color: #94a3b8; }
+    code { background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #7dd3fc; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="tag">SECURITY RESEARCH</span>
+    <h1>This subdomain was taken over</h1>
+    <p>
+      This page is a <strong>proof-of-concept</strong> for a subdomain takeover
+      submitted to the HubSpot HackerOne program.
+    </p>
+    <p>
+      The dangling CNAME for this host pointed at an unclaimed
+      <code>u&lt;id&gt;.wl&lt;n&gt;.sendgrid.net</code> record. That record has been
+      re-claimed in a new SendGrid account, so this content is now being served
+      from an account the researcher controls.
+    </p>
+    <div class="meta">
+      <div>Host: <code>__HOST__</code></div>
+      <div>Original CNAME: <code>__CNAME_TARGET__</code></div>
+      <div>Date: <code>2026-10-14</code></div>
+      <div>Contact: wearehackerone.com (HackerOne)</div>
+    </div>
+  </div>
+</body>
+</html>

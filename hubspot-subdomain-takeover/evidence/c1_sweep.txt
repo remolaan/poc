@@ -1,0 +1,74 @@
+www.hubspot.com/.git/config	403	4552	text/html; charset=UTF-8	https://www.hubspot.com/.git/config
+www.hubspot.com/.git/HEAD	403	4552	text/html; charset=UTF-8	https://www.hubspot.com/.git/HEAD
+www.hubspot.com/.env	403	4552	text/html; charset=UTF-8	https://www.hubspot.com/.env
+www.hubspot.com/robots.txt	200	12606	text/plain; charset=utf-8	https://www.hubspot.com/robots.txt
+www.hubspot.com/sitemap.xml	200	560769	application/xml	https://www.hubspot.com/sitemap.xml
+www.hubspot.com/.DS_Store	403	4552	text/html; charset=UTF-8	https://www.hubspot.com/.DS_Store
+www.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login/
+www.hubspot.com/.svn/entries	403	4552	text/html; charset=UTF-8	https://www.hubspot.com/.svn/entries
+dev.hubspot.com/.git/config	403	2826	text/html; charset=UTF-8	https://dev.hubspot.com/.git/config
+dev.hubspot.com/.git/HEAD	403	2826	text/html; charset=UTF-8	https://dev.hubspot.com/.git/HEAD
+dev.hubspot.com/.env	403	2826	text/html; charset=UTF-8	https://dev.hubspot.com/.env
+dev.hubspot.com/robots.txt	200	165	text/plain; charset=utf-8	https://product.hubspot.com/robots.txt
+dev.hubspot.com/sitemap.xml	200	1304340	application/xml	https://product.hubspot.com/sitemap.xml
+dev.hubspot.com/.DS_Store	403	2826	text/html; charset=UTF-8	https://dev.hubspot.com/.DS_Store
+dev.hubspot.com/.svn/entries	403	2826	text/html; charset=UTF-8	https://dev.hubspot.com/.svn/entries
+developers.hubspot.com/.git/config	403	4559	text/html; charset=UTF-8	https://developers.hubspot.com/.git/config
+developers.hubspot.com/.git/HEAD	403	4559	text/html; charset=UTF-8	https://developers.hubspot.com/.git/HEAD
+developers.hubspot.com/.env	403	4559	text/html; charset=UTF-8	https://developers.hubspot.com/.env
+developers.hubspot.com/robots.txt	200	351	text/plain; charset=utf-8	https://developers.hubspot.com/robots.txt
+developers.hubspot.com/sitemap.xml	200	44106	application/xml	https://developers.hubspot.com/sitemap.xml
+developers.hubspot.com/.DS_Store	403	4559	text/html; charset=UTF-8	https://developers.hubspot.com/.DS_Store
+developers.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login/
+developers.hubspot.com/.svn/entries	403	4559	text/html; charset=UTF-8	https://developers.hubspot.com/.svn/entries
+cms2.hubspot.com/robots.txt	200	260	text/plain; charset=utf-8	https://cms2.hubspot.com/robots.txt
+iframe.hubspot.com/.git/config	403	2826	text/html; charset=UTF-8	https://iframe.hubspot.com/.git/config
+iframe.hubspot.com/.git/HEAD	403	2826	text/html; charset=UTF-8	https://iframe.hubspot.com/.git/HEAD
+iframe.hubspot.com/.env	403	2826	text/html; charset=UTF-8	https://iframe.hubspot.com/.env
+iframe.hubspot.com/robots.txt	200	1148	text/plain; charset=utf-8	https://iframe.hubspot.com/robots.txt
+iframe.hubspot.com/sitemap.xml	200	5857	application/xml	https://iframe.hubspot.com/sitemap.xml
+iframe.hubspot.com/.DS_Store	403	2826	text/html; charset=UTF-8	https://iframe.hubspot.com/.DS_Store
+iframe.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login/
+iframe.hubspot.com/.svn/entries	403	2826	text/html; charset=UTF-8	https://iframe.hubspot.com/.svn/entries
+help.hubspot.com/.git/config	403	2826	text/html; charset=UTF-8	https://help.hubspot.com/.git/config
+help.hubspot.com/.git/HEAD	403	2826	text/html; charset=UTF-8	https://help.hubspot.com/.git/HEAD
+help.hubspot.com/.env	403	2826	text/html; charset=UTF-8	https://help.hubspot.com/.env
+help.hubspot.com/robots.txt	200	223	text/plain; charset=utf-8	https://help.hubspot.com/robots.txt
+help.hubspot.com/sitemap.xml	200	701	application/xml	https://help.hubspot.com/sitemap.xml
+help.hubspot.com/.DS_Store	403	2826	text/html; charset=UTF-8	https://help.hubspot.com/.DS_Store
+help.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login/
+help.hubspot.com/.svn/entries	403	2826	text/html; charset=UTF-8	https://help.hubspot.com/.svn/entries
+academy.hubspot.com/.git/config	403	2826	text/html; charset=UTF-8	https://academy.hubspot.com/.git/config
+academy.hubspot.com/.git/HEAD	403	2826	text/html; charset=UTF-8	https://academy.hubspot.com/.git/HEAD
+academy.hubspot.com/.env	403	2826	text/html; charset=UTF-8	https://academy.hubspot.com/.env
+academy.hubspot.com/robots.txt	200	335	text/plain; charset=utf-8	https://academy.hubspot.com/robots.txt
+academy.hubspot.com/sitemap.xml	200	171296	application/xml	https://academy.hubspot.com/sitemap.xml
+academy.hubspot.com/.DS_Store	403	2826	text/html; charset=UTF-8	https://academy.hubspot.com/.DS_Store
+academy.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login/
+academy.hubspot.com/.svn/entries	403	2826	text/html; charset=UTF-8	https://academy.hubspot.com/.svn/entries
+app.hubspot.com/api	200	289733	text/html; charset=UTF-8	https://developers.hubspot.com/
+app.hubspot.com/robots.txt	200	505	text/plain; charset=utf-8	https://app.hubspot.com/robots.txt
+app.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app.hubspot.com/login
+legal.hubspot.com/.git/config	403	2826	text/html; charset=UTF-8	https://legal.hubspot.com/.git/config
+legal.hubspot.com/.git/HEAD	403	2826	text/html; charset=UTF-8	https://legal.hubspot.com/.git/HEAD
+legal.hubspot.com/.env	403	2826	text/html; charset=UTF-8	https://legal.hubspot.com/.env
+legal.hubspot.com/robots.txt	200	165	text/plain; charset=utf-8	https://legal.hubspot.com/robots.txt
+legal.hubspot.com/sitemap.xml	200	131630	application/xml	https://legal.hubspot.com/sitemap.xml
+legal.hubspot.com/.DS_Store	403	2826	text/html; charset=UTF-8	https://legal.hubspot.com/.DS_Store
+legal.hubspot.com/.svn/entries	403	2826	text/html; charset=UTF-8	https://legal.hubspot.com/.svn/entries
+api.hubspot.com/robots.txt	200	70	text/plain; charset=utf-8	https://api.hubspot.com/robots.txt
+status.hubspot.com/.git/config	403	919	text/html	https://status.hubspot.com/.git/config
+status.hubspot.com/.git/HEAD	403	919	text/html	https://status.hubspot.com/.git/HEAD
+status.hubspot.com/.env	403	919	text/html	https://status.hubspot.com/.env
+status.hubspot.com/api	200	94645	text/html; charset=utf-8	https://status.hubspot.com/api
+status.hubspot.com/api/v1	200	90155	text/html; charset=utf-8	https://status.hubspot.com/
+status.hubspot.com/actuator	403	919	text/html	https://status.hubspot.com/actuator
+status.hubspot.com/actuator/env	403	919	text/html	https://status.hubspot.com/actuator/env
+status.hubspot.com/robots.txt	200	48	text/plain; charset=utf-8	https://status.hubspot.com/robots.txt
+status.hubspot.com/admin	200	26949	text/html; charset=utf-8	https://manage.statuspage.io/login?redirect=%2Fpages%2F8b9w1wwq3g7d
+status.hubspot.com/wp-login.php	403	919	text/html	https://status.hubspot.com/wp-login.php
+status.hubspot.com/login	200	90155	text/html; charset=utf-8	https://status.hubspot.com/
+status.hubspot.com/graphql	200	90155	text/html; charset=utf-8	https://status.hubspot.com/
+app-eu1.hubspot.com/api	200	289733	text/html; charset=UTF-8	https://developers.hubspot.com/
+app-eu1.hubspot.com/robots.txt	200	505	text/plain; charset=utf-8	https://app-eu1.hubspot.com/robots.txt
+app-eu1.hubspot.com/login	200	50874	text/html; charset=utf-8	https://app-eu1.hubspot.com/login

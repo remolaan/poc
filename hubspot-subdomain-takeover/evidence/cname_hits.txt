@@ -1,0 +1,53 @@
+academy.hubspot.com	53.group3.sites.hubspot.net.
+affiliate.hubspot.com	53.group3.sites.hubspot.net.
+affiliates.hubspot.com	53.group3.sites.hubspot.net.
+biz.hubspot.com	u6710732.wl233.sendgrid.net.
+canvas.hubspot.com	53.group3.sites.hubspot.net.
+certification.hubspot.com	53.group3.sites.hubspot.net.
+consulting.hubspot.com	459248.group48.sites.hubspot.net.
+customers.hubspot.com	137828.group28.sites.hubspot.net.
+customerportal.hubspot.com	53.group3.sites.hubspot.net.
+de.hubspot.com	53.group3.sites.hubspot.net.
+designer.hubspot.com	327485.group35.sites.hubspot.net.
+dev.hubspot.com	51294.group44.sites.hubspot.net.
+developer.hubspot.com	53.group3.sites.hubspot.net.
+developers.hubspot.com	53.group3.sites.hubspot.net.
+dhcp190.hubspot.com	;; Warning: ID mismatch: expected ID 54488, got 60224
+es.hubspot.com	53.group3.sites.hubspot.net.
+go.hubspot.com	a.performable.com.
+gay.hubspot.com	;; Warning: ID mismatch: expected ID 64748, got 28511
+help.hubspot.com	53.group3.sites.hubspot.net.
+help2.hubspot.com	53.group3.sites.hubspot.net.
+iframe.hubspot.com	53.group3.sites.hubspot.net.
+info.hubspot.com	249.group49.sites.hubspot.net.
+integrate.hubspot.com	mjmao93648.lithium.com.
+international.hubspot.com	53.group3.sites.hubspot.net.
+jp.hubspot.com	53.group3.sites.hubspot.net.
+dhcp19.hubspot.com	;; communications error to 1.1.1.1#53: timed out
+labs.hubspot.com	53.group3.sites.hubspot.net.
+learn.hubspot.com	hubelbapp-1928436823.us-east-1.elb.amazonaws.com.
+legacy.hubspot.com	53.group3.sites.hubspot.net.
+legal.hubspot.com	742851.group1.sites.hubspot.net.
+library.hubspot.com	53.group3.sites.hubspot.net.
+listen.hubspot.com	blog.hubspot.com.hubspot.com.
+marketplace.hubspot.com	53.group3.sites.hubspot.net.
+media.hubspot.com	20627419.group19.sites.hubspot.net.
+onboarding.hubspot.com	53.group3.sites.hubspot.net.
+pg2.hubspot.com	pg2.app2.hubspot.com.
+fuk.hubspot.com	;; communications error to 1.1.1.1#53: timed out
+policy.hubspot.com	19958781.group31.sites.hubspot.net.
+privacy.hubspot.com	4681201.group1.sites.hubspot.net.
+product.hubspot.com	51294.group44.sites.hubspot.net.
+research.hubspot.com	53.group3.sites.hubspot.net.
+resources.hubspot.com	53.group3.sites.hubspot.net.
+sip.office.hubspot.com	;; Warning: ID mismatch: expected ID 33846, got 22592
+sites.hubspot.com	hs-sites.origin.hubspot.net.
+status.hubspot.com	8b9w1wwq3g7d.stspg-customer.com.
+super.hubspot.com	www-2.performable.com.
+team.hubspot.com	152363.group13.sites.hubspot.net.
+tnt.hubspot.com	1854059.group9.sites.hubspot.net.
+trial.hubspot.com	53.group3.sites.hubspot.net.
+var.hubspot.com	53.group3.sites.hubspot.net.
+workshop.hubspot.com	u22944788.wl039.sendgrid.net.
+www.cms.hubspot.com	cms2.hubspot.com.
+sip.365.hubspot.com	;; communications error to 1.1.1.1#53: timed out
