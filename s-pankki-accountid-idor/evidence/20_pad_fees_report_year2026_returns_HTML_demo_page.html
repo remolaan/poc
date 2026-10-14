@@ -1,0 +1,1005 @@
+<!DOCTYPE HTML>
+<html lang="fi" class="default-skin">
+    <head>
+        <title>
+	   		Verkkopankki | S-Pankki</title>
+
+        <link rel="stylesheet" type="text/css" href="/theme/css/merge.css?version=RC-release-2026.10-20261007212654EEST-b475bec2"/>
+<link rel="stylesheet" type="text/css" href="/theme/css/defaultSass.css?version=RC-release-2026.10-20261007212654EEST-b475bec2" />
+<link rel="stylesheet" type="text/css" href="/theme/css/print.css?version=RC-release-2026.10-20261007212654EEST-b475bec2" media="print" />
+
+<link rel="preconnect" href="//app.usercentrics.eu">
+<link rel="preconnect" href="//api.usercentrics.eu">
+<link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+<link rel="preload" href="https://app.usercentrics.eu/browser-ui/3.64.0/loader.js" as="script" crossorigin="anonymous" integrity="sha384-fte8jXdgUqvTF2fObeu0M7Gcb1vgmJMmPpvh7r0SCROl4aeP4anwgaElzEcIeyoj">
+<script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/3.64.0/loader.js" data-settings-id="AedqwPYCD" async crossorigin="anonymous" integrity="sha384-fte8jXdgUqvTF2fObeu0M7Gcb1vgmJMmPpvh7r0SCROl4aeP4anwgaElzEcIeyoj"></script>
+<link rel="preload" href="https://privacy-proxy.usercentrics.eu/3.3.10/uc-block.bundle.js" as="script" crossorigin="anonymous" integrity="sha384-ZxtGs7nfee/G6OEf602L&#x2B;OfmIhN0kteQFu3XWFIP2TxyM14G/4yByBVfdCarakLy">
+<script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/3.3.10/uc-block.bundle.js" crossorigin="anonymous" integrity="sha384-ZxtGs7nfee/G6OEf602L&#x2B;OfmIhN0kteQFu3XWFIP2TxyM14G/4yByBVfdCarakLy"></script>
+<noscript>
+    <style>
+    html, body {
+        height: 100% !important;
+        overflow: hidden;
+    }
+    header, main, footer, .versionInfo { display: none !important; }
+
+</style>
+
+<div class="js-error">
+    <div class="logo">
+        <div class="image-wrapper">
+            <div class="image"></div>
+        </div>
+    </div>
+
+    <div class="system-error">
+        <div class="js-error--wrapper">
+            <div class="text">
+                <h2>Hups!</h2>
+                <p>Javascriptiä ei ole aktivotu selaimessasi.</p>
+            </div>
+            <div class="image">
+                <div class="illustration"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</noscript>
+
+<script type="text/javascript">
+    // Pagination labels (DataTables API)
+    var pagination = {}
+    pagination.language = {
+        paginate:{
+            next: 'Seuraava',
+            previous: 'Edellinen'
+        }
+    }
+
+    var labels = {
+        
+        lbl_session_about_die_t:    'Istuntosi on vanhenemassa',
+        lbl_session_dead_t:         'Istuntosi on vanhentunut',
+        lbl_session_about_die_c:    'Kirjaamme sinut ulos verkkopankista&nbsp;',
+        lbl_session_dead_c:         'Verkkopankin istuntosi on vanhentunut. Kirjaudu uudelleen, mikäli haluat jatkaa palvelun käyttöä.',
+        lbl_seconds:                'sekunnin kuluttua, koska et ole hetkeen käyttänyt verkkopankkia.',
+        lbl_renew:                  'Jatka käyttöä',
+        lbl_logout:                 'Kirjaudu ulos',
+        lbl_relogin:                'Kirjaudu uudelleen',
+        lbl_close:                  'Sulje',
+        lbl_logout_href:            'https://www.s-pankki.fi/fi/logout',
+        lbl_already_clicked:        'Sivua ladataan, odota hetki.',
+
+        
+        lbl_wait:                   'Tietoja haetaan. Odota hetki.',
+        lbl_wait2:                  'Odota hetki.',
+        lbl_waitForCardChanges:     'Odota hetki.',
+
+        
+        lbl_alert_title:            'Huomio',
+        messageRefTitle:            '',
+        messageOrRefMandatoryTitle: '',
+        messageOrReferenceMandatory:'Viitenumero tai viesti on pakollinen tieto.',
+        piggyTitle:                 '',
+        btn_no:                     'Peruuta',
+        btn_yes:                    'Jatka',
+        lbl_cancel:                 '',
+        message_or_reference:       'Haluatko varmasti syöttää maksun ilman viestiä ja viitenumeroa?',
+        receipt_confirmation:       'Olet tilaamassa maksullisen kuitin. Kuitti postitetaan kotiosoitteeseesi parin päivän kuluessa. Vahvista tilaaminen valitsemalla OK.',
+        pay_from_saved:             '(HUOM!) Oletko varma, että haluat suorittaa maksun säästöpossu-tililtäsi?',
+        err_redEmailErr:            'Tarkista sähköpostiosoitteesi.',
+        
+        lbl_pre_count:              'Merkkejä jäljellä &nbsp',
+
+        
+        lbl_ajaxFail:               'Tapahtui odottamaton virhe. Ole hyvä ja yritä myöhemmin uudelleen.',
+        wannaSave:                  'Huomioithan, että voit halutessasi tallentaa hakemuksen keskeneräiseksi.',
+
+        
+        lbl_applicant_PH_default:   'Kerro tarvittaessa lisätietoa esim. elämäntilanteesta, talouden tuloista, olemassa olevista varoista ja lainoista.',
+        lbl_applicant_PH_employed:  'Kerro tarvittaessa lisätietoa esim. työsuhteesta, talouden tuloista, olemassa olevista varoista ja lainoista.',
+        lbl_applicant_PH_entrepreneur: 'Kerro tarvittaessa lisätietoa esim. yrityksen tilasta, talouden tuloista, olemassa olevista varoista ja lainoista.',
+        lbl_applicant_PH_pensioner: 'Kerro tarvittaessa lisätietoa esim. elämäntilanteesta, talouden tuloista, olemassa olevista varoista ja lainoista.',
+        lbl_applicant_PH_other:     'Kerro tarvittaessa lisätietoa esim. elämäntilanteesta, talouden tuloista, olemassa olevista varoista ja lainoista.',
+        lbl_applicant_AI_default:   'Mikäli palkkasi ei ohjaudu vielä meille, voit liittää mukaan kopion viimeisimmästä palkkalaskelmasta, verotuspäätöksestä tai sen erittelyosasta. Liitteiden toimittaminen hakemusvaiheessa nopeuttaa lainapäätöksen tekemistä. ',
+        lbl_applicant_AI_employed:  'Mikäli palkkasi ei ohjaudu vielä meille, voit liittää mukaan kopion viimeisimmästä palkkalaskelmasta, verotuspäätöksestä tai sen erittelyosasta. Liitteiden toimittaminen hakemusvaiheessa nopeuttaa lainapäätöksen tekemistä.',
+        lbl_applicant_AI_entrepreneur: 'Liitä jo tässä vaiheessa yrityksesi tilinpäätöstiedot sekä oma henkilökohtainen verotuspäätöksesi, jos mahdollista. Liitteiden toimittaminen on edellytyksenä hakemuksen käsittelylle.',
+        lbl_applicant_AI_pensioner: 'Mikäli eläkkeesi ei ohjaudu vielä meille, voit liittää mukaan kopion viimeisimmästä eläkepäätöksestä. Liitteiden toimittaminen hakemusvaiheessa nopeuttaa lainapäätöksen tekemistä.',
+        lbl_applicant_AI_other:     'Mikäli tulosi ei ohjaudu vielä meille, voit liittää mukaan selvityksen tulojen laadusta, esim. vanhempainrahapäätöksen. Liitteiden toimittaminen hakemusvaiheessa nopeuttaa lainapäätöksen tekemistä.',
+        lbl_object_PH_housingShare: 'Kerro tässä tarkempia tietoja, mikäli kohteen myyjään, kohteen sijaintiin tai itse kohteeseen liittyy jotain erityispiirteitä. Esim. asunto on loft-asunto, myyjänä toimii kuolinpesä tai kyseessä on sukulaiskauppa.',
+        lbl_object_PH_realEstate:   'Kerro tässä tarkempia tietoja, mikäli kohteen myyjään, kohteen sijaintiin tai itse kohteeseen liittyy jotain erityispiirteitä. Esim. myyjänä kuolinpesä tai kyseessä on sukulaiskauppa.',
+        lbl_object_PH_otherA:       'Kerro tässä tarkempia tietoja, mikäli kohteen myyjään, kohteen sijaintiin tai itse kohteeseen liittyy jotain erityispiirteitä. Esim. asunto on loft-asunto, myyjänä toimii kuolinpesä tai kyseessä on sukulaiskauppa.',
+        lbl_object_PH_otherB:       'Kerro tässä tarkempia tietoja, mikäli kohteen myyjään, kohteen sijaintiin tai itse kohteeseen liittyy jotain erityispiirteitä. Esim. asunto on loft-asunto, myyjänä toimii kuolinpesä tai kyseessä on sukulaiskauppa.',
+        lbl_object_PH_unknown:      'Kohteelle asetetut toiveet, esimerkiksi remontoitava kohde järven rannalla.',
+        lbl_object_AI_housingShare: 'Hakemuksen käsittelyä nopeuttaa, jos liität mukaan kohteen isännöitsijäntodistuksen tai esim. remontin kustannusarvion.',
+        lbl_object_AI_realEstate:   'Halutessasi voit liittää mukaan lisätietoja kohteesta tai esim. remontin kustannusarvion.',
+        lbl_object_AI_otherA:       'Halutessasi voit liittää mukaan lisätietoja kohteesta.',
+        lbl_object_AI_otherB:       'Halutessasi voit liittää mukaan lisätietoja kohteesta.',
+        lbl_object_AI_unknown:      'Halutessasi voit liittää mukaan lisätietoja kohteesta.',
+        lbl_rooms_PH_text:          'esim. k+khh+s',
+
+        
+        lbl_rp_confirm_delete_title:'Vahvista poisto',
+        lbl_rp_confirm_delete_text: 'Vahvista, että haluat poistaa e-laskuliittymän napsauttamalla Poista.',
+        lbl_rp_confirm_delete_button: 'Poista',
+        lbl_rp_connections_title:   'E-laskuehdotukset (voimassa 30 päivää saapumisesta)',
+
+        
+        lbl_qr_loading_failed:      'QR-koodin lataaminen epäonnistui, yritä myöhemmin uudelleen.',
+        lbl_qr_err_general:         'QR-koodin lataaminen epäonnistui, yritä myöhemmin uudelleen.',
+
+        
+        lbl_unconfirmedpayments:    'Sinulla on vahvistamattomia maksuja. Niitä ei veloiteta tililtäsi ennen kuin olet vahvistanut ne tunnusluvulla.',
+        lbl_unconfirmedpayments2:   'Haluatko varmasti kirjautua ulos?',
+
+        
+        btn_cancel:             'Peruuta',
+        btn_save:               'Tallenna',
+        btn_ok:                 'OK',
+        lbl_back:               'Takaisin',
+        lbl_erase:              'Poista viesti',
+        lbl_are_you_sure_to_leave_app:      'Oletko varma että haluat poistua?',
+        lbl_yes:                            'Kyllä',
+        err_maxFileSize:                    'Virhe tiedoston lisäämisessä. Tarkista tiedoston koko.<br><br> Tiedoston enimmäiskoko on 5 megatavua.',
+        err_invalid_file_type:              'Virheellinen tiedosto. Seuraavat tiedostotyypit ovat sallittuja: JPG, PNG, PDF, DOC, DOCX, BMP, XPS, RTF, ODT<br/>Tiedoston maksimikoko on 5 megatavua.',
+        lbl_no:                             'Ei',
+        err_file_list_empty:                'Lisää pyydetyt liitetiedostot.',
+        lbl_openInNewWindow:    'Avautuu uuteen ikkunaan',
+
+        
+        lbl_loan_status_processing:         'Hakemus käsittelyssä',
+        lbl_loan_status_cancelled:          'Peruttu',
+        lbl_loan_status_declined:           'Hakemus hylätty',
+        lbl_loan_status_approved:           'Hakemus hyväksytty',
+        lbl_loan_status_waitingforcustomerdecision:    'Odottaa sopimuksen allekirjoitusta',
+        lbl_loan_status_waitingforattachments:    'Odottaa liitteitä hakemukseen',
+        lbl_loan_status_sent:               'Hakemus lähetetty',
+        lbl_dialog_reject_title:            'Hylkää tarjous',
+        lbl_dialog_reject_text:             'Vahvista hylkäys',
+        lbl_sloan_dialog_reject_text:       'Jos valitset Kyllä, hylkäämme lainatarjouksesi etkä voi enää hyväksyä sitä myöhemmin. Jos valitse Ei, palaat takaisin edelliseen näkymään.',
+        lbl_dialog_reject_btn_reject:       'Hylkää tarjous',
+        lbl_dialog_reject_btn_cancel:       'Peruuta',
+        lbl_to_netbank:                     ' Poistu',
+        lbl_processing_application_head:    'Käsittelemme hakemustasi',
+        lbl_processing_application:         'Käsittelemme hakemustasi, joten odotathan hetken siirtymättä pois tältä sivulta. Kaikki on valmista viimeistään 2 minuutin kuluttua.',
+        lbl_euro:                           '&euro;',
+        lbl_year_short:                     'v',
+        lbl_month_short:                    'kk',
+        lbl_loan_fileupload_title:          'Lataa tiedosto',
+        lbl_loan_delete_attachment_title:   'Poista liitetiedosto',
+        lbl_phone_number_placeholder:       '',
+        lbl_loan_filedelete_title:          '',
+
+        
+        lbl_myadvisor_unassigned:           'Ota yhteyttä',
+
+        
+        lbl_signing_error_try_again:        'Yritä uudelleen',
+
+        lbl_reject_dialog_title:            'Oletko aivan varma että haluat hylätä lainatarjouksen?',
+        lbl_reject_dialog_action_reject:    '',
+        lbl_exit:                           '',
+        btn_accept_later:                   '',
+        lbl_approve_later_dialog_title:     'Hyväksy tarjous myöhemmin',
+        lbl_error_occurred:                 'Tapahtui virhe',
+        lbl_info_overlay_title_text:        'Näin helposti haet S-Lainaa',
+        lbl_apply_wait_msg:                 'Käsittelemme hakemustasi, joten odotathan hetken siirtymättä pois tältä sivulta. Kaikki on valmista viimeistään 2 minuutin kuluttua.',
+
+        
+        lbl_verifyCustomer_title:           'Tekstiviestivahvistus',
+        btn_verification_close:             'Sulje',
+        btn_send_verification_code:         'Lähetä tekstiviesti',
+        btn_confirm_sms_code:               'Vahvista',
+        btn_verification_done:              'Sulje',
+
+        lbl_error_general:                  'Ole hyvä ja yritä myöhemmin uudelleen.',
+
+       lbl_error_barcodeInvalid:           'Viivakoodin lukeminen epäonnistui. Yritä uudelleen tai syötä tiedot käsin.',
+       lbl_error_missingAccount:           'Saajan tilinumero puuttuu.',
+       lbl_error_recipientName:            'Kirjoita saajan nimi',
+
+
+       
+       lbl_noMatchHeader:                  'Huomio! Tilinumero ja saajan nimi eivät vastaa toisiaan. Tarkista maksutiedot.',
+       lbl_noMatchInfo:                    'Tarkista, että saajan nimi ja tilinumero on kirjoitettu oikein. Jos jatkat maksua näillä tiedoilla, emme voi varmistaa, että maksu menee ilmoittamallesi saajalle. Maksun jatkaminen on omalla vastuullasi, emmekä vastaa mahdollisesti aiheutuvasta varojen menetyksestä. Maksu välitetään tilinumeron perusteella.',
+       lbl_matchHeader:                    'Tilinumero ja saajan nimi vastaavat toisiaan',
+       lbl_matchInfo:                      'Tilinumero kuuluu kirjoittamallesi maksunsaajalle. Voit jatkaa eteenpäin täyttämään maksun muita tietoja.',
+       lbl_vopFailHeader:                  'Tilinumeron ja saajan vastaavuutta ei voida tarkistaa juuri nyt',
+       lbl_vopFailInfo:                    'Varmista, että saajan tilinumero on varmasti kirjoitettu oikein. Jos tilinumero on kirjoitettu oikein, voit halutessasi jatkaa maksua. Maksu välitetään tilinumeron perusteella.',
+       lbl_closeMatchHeader:               'Tilinumero ja saajan nimi eivät täysin vastaa toisiaan. Tarkista maksutiedot.',
+       lbl_closeMatchInfo:                 'Saajan nimi on lähes sama, kuin tilinumeroon liitetty nimi. Ero voi johtua esimerkiksi kirjoitusvirheestä tai eri pankkien tavoista tallentaa tiliin liitetty nimi. Järjestelmä ehdottaa saajan oikeaa nimeä, jonka voit päivittää maksulle.',
+       lbl_vopNotApplicableHeader:         'Tilinumeron ja saajan vastaavuutta ei voida tarkistaa juuri nyt',
+       lbl_vopNotApplicableInfo:           'Varmista, että saajan tilinumero on varmasti kirjoitettu oikein. Jos tilinumero on kirjoitettu oikein, voit halutessasi jatkaa maksua. Maksu välitetään tilinumeron perusteella.',
+
+       
+       btn_edit:                           'Muokkaa',
+       btn_continue_without_change:        'Jatka tekemättä muutosta',
+       btn_continue_anyway:                'Jatka',
+       btn_change_continue:                'Käytä ehdotusta ja jatka',
+    };
+
+    
+    labels.myprofilekyc = {
+        lbl_window_title_text:              'Mitä kysymme ja miksi?',
+        btn_continue:                       'Aloita',
+        btn_close:                          'Poistu',
+        lbl_remove:                         'Poista',
+        lbl_leave_page:                     '',
+        lbl_leave_page_dialog_title:        'Tietojen päivittäminen on vielä kesken',
+        lbl_leave_page_dialog_confirm:      'Poistu',
+        lbl_leave_page_dialog_cancel:       'Peruuta'
+    };
+    labels.validationMessages = {
+        valueMissing:                       'Tieto on pakollinen.',
+        rangeUnderflow:                     '',
+        rangeOverflow:                      '',
+        tooLong:                            'Teksti on liian pitkä.',
+        tooShort:                           'Teksti on liian lyhyt.',
+        general:                            'Tarkista antamasi tiedot.',
+        lbl_tin_validation_pattern_label_prefix:    'Kirjoita alle verotunnisteesi muodossa',
+        lbl_tin_validation_pattern_label_suffix:    '.',
+        lbl_tin_validation_pattern_error_prefix:    'Kirjoittamasi verotunniste ei vastaa muotoa',
+        lbl_tin_validation_pattern_error_suffix:    '. Ole hyvä ja korjaa verotunniste.'
+    }
+
+    labels.sloan = {
+      lbl_loan_button_browse:               'Selaa',
+      lbl_loan_button_cancel:               'Peruuta',
+      lbl_agreements_document_label_secci_v2:           'Vakiomuotoiset eurooppalaiset kuluttajaluottotiedot',
+      lbl_agreements_document_label_s_loan_agreement:   'S-Lainasopimus'
+    }
+
+    labels.warnondirtyform = {
+        lbl_warnondirtyform_title:                          'Oletko varma, että haluat jatkaa tallentamatta?',
+        lbl_warnondirtyform_message:                        'Jos valitset "Kyllä", siirryt pois tästä näkymästä ja menetät antamasi muutokset.',
+        btn_warnondirtyform_close:                          'Ei',
+        btn_warnondirtyform_continue:                       'Kyllä'
+    }
+
+    labels.kycCorporateLoginDialog = {
+        lbl_title: 'Anteeksi keskeytys',
+        btn_continue: 'Päivitä tiedot',
+        btn_close: 'Ohita'
+    }
+
+    var pattern = {
+        monetary_amount_precision4: '#,##0.0000',
+        monetary_amount_precision6: '#,##0.000000',
+        monetary_amount_precision0: '#,##0',
+        monetary_amount_precision1: '#,###0.#',
+        monetary_amount_precision2: '#,##0.00',
+        monetary_amount_precision3: '#,##0.000'
+    };
+
+    var requestedWithApp = "";
+    
+
+    window.cbs = window.cbs || {};
+    window.cbs.labels = labels;
+    window.cbs.pagination = pagination;
+    window.cbs.app = {};
+    window.cbs.app.myprofilekyc = {};
+    window.cbs.pattern = pattern;
+    window.cbs.contextPath = window.cbs.contextPath || '/ebank';
+    window.cbs.qrId = '' > '' ? '' : null;
+    window.cbs.deepLink = 'false';
+    window.cbs.requestedWithApp = requestedWithApp;
+    window.cbs.orderRef = ('false' === 'true');
+    window.cbs.locale = window.cbs.locale || 'fi_FI';
+    window.cbs.netbankSkin = window.cbs.netbankSkin || 'default-skin';
+    window.cbs.csrfToken = '5987cd9f-3ae6-4a41-aec0-f72eec9b8503';
+    window.cbs.cbsOrigin = '';
+    window.cbs.session = {
+        timeout: 5.0,
+        boostAiChatTimeout: 55,
+        logoutURL: 'https://www.s-pankki.fi/fi/logout',
+        postLogoutURL: '/ebank'+'/auth/logout.do',
+        extendURL: '/ebank'+'/extendSession.jsp'
+    };
+
+    // Register service worker acting on the global scope
+    // Service worker located at root in cbs-inet-docroot-sba
+    if ('serviceWorker' in navigator) {
+        navigator
+            .serviceWorker
+            .register("/service-worker.js?version=RC-release-2026.10-20261007212654EEST-b475bec2", {
+                scope: '/'
+            })
+            .then(// Success
+                function (registration) {
+                    registration.update();
+                },
+                // Error
+                function (error) {
+                    console.log('Failed to register service worker: ', error);
+                });
+    }
+</script>
+<link href="/theme/css/ebank.31a7fb81e3f07b29f469.css" rel="stylesheet"><script src="/theme/main.2701aab409d8c80c4c37.js"></script><script src="/theme/main.eeb0faa7a40206d63f2d.js"></script><script src="/theme/main.8a4f3014fd535f10fc56.js"></script><script src="/theme/main.e9ccd144b5dcee68e850.js"></script><script src="/theme/main.a24d251f283cd28c68dc.js"></script><script src="/theme/main.59ccf3ecb1fdcef4ed71.js"></script><script src="/theme/main.52f68e1ce92004d60a9d.js"></script><script type="text/javascript"
+    src="/theme/js/jquery-ui-1.8/i18n/ui.datepicker-fi_FI.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+<link rel="stylesheet" href="/theme/subapplications/pad/fees/style.css?version=RC-release-2026.10-20261007212654EEST-b475bec2" type="text/css" />
+<link rel="stylesheet" href="/theme/subapplications/pad/fees/subapplication.css?version=RC-release-2026.10-20261007212654EEST-b475bec2" type="text/css" />
+<script src="/theme/subapplications/pad/fees/cbs-subapplication.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script></head>
+
+    <body class="ebank no-js fi"  >
+
+        <a href="#main" class="skip-to-main show-on-focus">Siirry suoraan sisältöön</a>
+
+        <img style="display:none;" src="/theme/img/misc/clear.gif" onload="$('body').removeClass('no-js').addClass('js');"  alt=""/>
+        <a id="top"></a>
+        <div id="site" class="haslayout_fix">
+            <header class="cf-header">
+                <div class="demo-red-banner">
+                        Tämä on demoversio verkkopankista</div><div class="content">
+                    <div class="logo">
+                        <a href="/ebank/accountview/overview.do?menuId=mybank">Siirry etusivulle</a>
+                            </div>
+                    <div class="logout">
+                        <div class="logout-text">
+                            <a class="customer-name" href="/ebank/myprofile/initMyAddress.do?menuId=settings_mnu_myinfo" >
+                                MAIJA MEIKÄLÄINEN</a>
+                        </div>
+                        <span class="logout-link">
+                            <a id="logOut" class="button checkForUnconfirmedPayments" href="/ebank/auth/logout.do">
+                                Kirjaudu ulos</a>
+                        </span>
+                    </div>
+
+                    <nav class="navigation">
+            <ul class="level-1 clear">
+            <li aria-haspopup="true" class=" act frontpage" aria-current="page">
+                    <a aria-haspopup="true" aria-expanded="false" id="frontpage-link1" class="level1 act-link" href="/ebank/accountview/overview.do?menuId=mybank">
+                Etusivu</a>
+                </li>
+            <li aria-haspopup="true" class="has-submenu payments">
+                    <a aria-haspopup="true" aria-expanded="false" id="payments-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=payments&amp;menuId=payments">
+                Maksut</a>
+                <div class="mega mega-2">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="payments_mnu_sepapayment-link2"  href="/ebank/sepapayment/sepa-start.do?menuId=payments_mnu_sepapayment">
+                                <span>
+                                Uusi maksu</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="payments_mnu_owntransfer-link2"  href="/app/#/payments/own-transfer?menuId=payments_mnu_owntransfer">
+                                <span>
+                                Siirto omalle tilille</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="payments_mnu_upcoming-link2"  href="/ebank/account/initUpcomingPaymentsList.do?menuId=payments_mnu_upcoming">
+                                <span>
+                                Erääntyvät maksut</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="payments_mnu_foreignPayment-link2"  href="/ebank/foreignp/initNewForeignPayment.do?init=yes&tap=1">
+                                <span>
+                                Ulkomaan tilisiirto</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="payments_mnu_currency-link2"  href="/ebank/currency/initShowCurrencies.do?menuId=payments_mnu_currency">
+                                <span>
+                                Valuuttakurssit</span>
+                                </a>
+                                </li>
+                            </ul><ul class="megaLinks">
+                        <li aria-haspopup="false" >
+                                <a id="payments_mnu_payees-link2"  href="/ebank/payees/payeeList.do?menuId=payments_mnu_payees">
+                                <span>
+                                Maksunsaajaluettelo</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="payments_mnu_invoice-link2"  href="/ebank/invoice/startInvoice.do?menuId=payments_mnu_invoice">
+                                <span>
+                                E-lasku</span>
+                                </a>
+                                <ul class="sub"> <li aria-haspopup="false" >
+                                        <a id="payments_mnu_invoice_service-link3"href="/ebank/invoice/invoiceService.do?menuId=payments_mnu_invoice_service">
+                                                <span>
+                                            E-laskupalvelusopimus</span>
+                                        </a>
+                                        </li>
+                                    </ul> </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu accounts">
+                    <a aria-haspopup="true" aria-expanded="false" id="accounts-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=accounts&amp;menuId=accounts">
+                Tilit</a>
+                <div class="mega mega-2">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="accounts_mnu_accountoverview-link2"  href="/app/#/accounts?menuId=accounts_mnu_accountoverview">
+                                <span>
+                                Omat tilit</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_accountdetails-link2"  href="/ebank/account/initTransactionListFromMenu.do?tab=tab1">
+                                <span>
+                                Tilitapahtumat</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_statements-link2"  href="/ebank/accountstatement/init.ds?menuId=accounts_mnu_statements">
+                                <span>
+                                Tiliote</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_pad-link2"  href="/ebank/pad/fees/init.ds?menuId=accounts_mnu_pad">
+                                <span>
+                                Maksuerittely</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_closedaccounts-link2"  href="/ebank/account/closed/transactions/init.ds?menuId=accounts_mnu_closedaccounts">
+                                <span>
+                                Lopetetut tilit</span>
+                                </a>
+                                </li>
+                            </ul><ul class="megaLinks">
+                        <li aria-haspopup="false" >
+                                <a id="accounts_mnu_myeconomy-link2"  href="/ebank/budget/initMyReport.do?menuId=accounts_mnu_myeconomy">
+                                <span>
+                                Tulojen ja menojen seuranta</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_info_openaccount-link2"  href="/ebank/openaccount/infoChooseAccount.do?menuId=accounts_mnu_info_openaccount">
+                                <span>
+                                Avaa uusi tili</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_alerts-link2"  href="/app/#/accounts/notifications?menuId=accounts_mnu_alerts">
+                                <span>
+                                Saldoviestit</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="accounts_mnu_esalary-link2"  href="/app/#/accounts/e-salary?menuId=accounts_mnu_esalary">
+                                <span>
+                                Verkkopalkka</span>
+                                </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu s_cards">
+                    <a aria-haspopup="true" aria-expanded="false" id="s_cards-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=s_cards&amp;menuId=s_cards">
+                Kortit</a>
+                <div class="mega mega-1">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="s_cards_mnu_overview-link2"  href="/ebank/card/overview.ds?menuId=s_cards_mnu_overview">
+                                <span>
+                                Omat kortit</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="s_cards_mnu_moneytransfer-link2"  href="/app/#/cards/money-transfer?menuId=s_cards_mnu_moneytransfer">
+                                <span>
+                                Luoton siirto tilille</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="s_cards_mnu_changecredit-link2"  href="/app/#/cards/credit-increase?menuId=s_cards_mnu_changecredit">
+                                <span>
+                                Hae luoton korotusta</span>
+                                </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu s_credits">
+                    <a aria-haspopup="true" aria-expanded="false" id="s_credits-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=s_credits&amp;menuId=s_credits">
+                Lainat</a>
+                <div class="mega mega-1">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="s_credits_mnu_creditapplication-link2"  href="/ebank/credits/initCreditAppStart.do?menuId=s_credits_mnu_creditapplication">
+                                <span>
+                                Hae lainaa</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="s_credits_mnu_overview-link2"  href="/ebank/credits/showCreditsOverview.do?parent=0">
+                                <span>
+                                Omat lainat</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="s_credits_mnu_moneytransfer-link2"  href="/app/#/cards/money-transfer?menuId=s_credits_mnu_moneytransfer">
+                                <span>
+                                Luoton siirto tilille</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="loan_mnu_interestcert-link2"  href="/ebank/interestcert/initInterestCertList.do?menuId=loan_mnu_interestcert">
+                                <span>
+                                Korkotodistus</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="loan_mnu_loan_agreements_signing-link2"  href="/ebank/agreements/unsigned/list.ds?category=loan">
+                                <span>
+                                Allekirjoitusta odottavat asiakirjat</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="loan_mnu_loan_agreements_signed-link2"  href="/ebank/agreements/pending/list.ds?category=loan">
+                                <span>
+                                Allekirjoitetut asiakirjat</span>
+                                </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu fim_investments">
+                    <a aria-haspopup="true" aria-expanded="false" id="fim_investments-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=fim_investments&amp;menuId=fim_investments">
+                Säästöt ja sijoitukset</a>
+                <div class="mega mega-1">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="fimfunds_mnu_savings_contract_intro-link2"  href="/ebank/fim/sweeping/initFundSavingsIntro.ds?menuId=fimfunds_mnu_savings_contract_intro">
+                                <span>
+                                Rahastosäästäminen</span>
+                                </a>
+                                <ul class="sub"> <li aria-haspopup="false" >
+                                        <a id="fimfunds_mnu_all_funds-link3"href="/ebank/fim/funds/viewAllFunds.ds?menuId=fimfunds_mnu_all_funds">
+                                                <span>
+                                            Tutustu ja osta rahastoa</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="fimfunds_mnu_bonus_savings_contract_intro-link3"href="/ebank/fim/funds/bonus/fundSelection.ds?menuId=fimfunds_mnu_bonus_savings_contract_intro">
+                                                <span>
+                                            Bonus rahastoon</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="fimfunds_mnu_monthly_fund_savings-link3"href="/ebank/fim/funds/mfs/createContract.ds?menuId=fimfunds_mnu_monthly_fund_savings">
+                                                <span>
+                                            Kuukausisäästäminen</span>
+                                        </a>
+                                        </li>
+                                    </ul> </li>
+                            <li aria-haspopup="false" >
+                                <a id="fim_mnu_customer_products-link2"  href="/ebank/fim/customer/products.ds?menuId=fim_mnu_customer_products">
+                                <span>
+                                Säästä ja sijoita S-Pankissa</span>
+                                </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu messages">
+                    <a aria-haspopup="true" aria-expanded="false" id="messages-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=messages&amp;menuId=messages">
+                Asiakaspalvelu</a>
+                <div class="mega mega-1">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="messages_mnu_customerservice-link2"  href="/ebank/messages/customerService.do?menuId=messages_mnu_customerservice">
+                                <span>
+                                Asiakaspalvelu</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="messages_mnu_messages_ccm-link2"  href="/ebank/messages/showMessageThreads.ds?menuId=messages_mnu_messages_ccm">
+                                <span>
+                                Saapuneet ja lähetetyt viestit</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="messages_mnu_writeCategory_ccm-link2"  href="/ebank/messages/initSendMessage.ds?menuId=messages_mnu_writeCategory_ccm">
+                                <span>
+                                Kirjoita viesti</span>
+                                </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            <li aria-haspopup="true" class="has-submenu settings">
+                    <a aria-haspopup="true" aria-expanded="false" id="settings-link1" class="level1 " href="/ebank/menu/firstChildMenuItem.do?parent=settings&amp;menuId=settings">
+                Asetukset</a>
+                <div class="mega mega-1">
+                    <div class="megaDynamic">
+                    <div class="megaColLines clear">
+                    <ul class="megaLinks">
+                    <li aria-haspopup="false" >
+                                <a id="settings_mnu_customize-link2"  href="/ebank/myprofile/mySettings.do?menuId=settings_mnu_customize">
+                                <span>
+                                Muokkaa verkkopankkia</span>
+                                </a>
+                                <ul class="sub"> <li aria-haspopup="false" >
+                                        <a id="settings_mnu_language-link3"href="/ebank/myprofile/initMyLangSettings.do?menuId=settings_mnu_language">
+                                                <span>
+                                            Kieli</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_myoverview-link3"href="/ebank/accountview/overviewSettings.do?menuId=settings_mnu_myoverview">
+                                                <span>
+                                            Muokkaa yhteenvetoa</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_accounts-link3"href="/ebank/myprofile/initMyAccNameSettings.do?menuId=settings_mnu_accounts">
+                                                <span>
+                                            Nimeä ja muokkaa tilejä</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_analytics-link3"href="/ebank/analyticsdata/analytics.ds?menuId=settings_mnu_analytics">
+                                                <span>
+                                            Rajoita tietojen keräämistä</span>
+                                        </a>
+                                        </li>
+                                    </ul> </li>
+                            <li aria-haspopup="false" >
+                                <a id="settings_mnu_netbank_id-link2"  href="/ebank/user/userOverview.ds?menuId=settings_mnu_netbank_id">
+                                <span>
+                                Verkkopankkitunnukset</span>
+                                </a>
+                                <ul class="sub"> <li aria-haspopup="false" >
+                                        <a id="settings_mnu_user_id-link3"href="/ebank/user/userId.ds?menuId=settings_mnu_user_id">
+                                                <span>
+                                            Käyttäjätunnus</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_password-link3"href="/ebank/myprofile/initMyPassword.do?menuId=settings_mnu_password">
+                                                <span>
+                                            Salasanan vaihto</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_codetable-link3"href="/ebank/myprofile/initMyPinCodeList.do?menuId=settings_mnu_codetable">
+                                                <span>
+                                            Tunnuslukutaulukon vaihto</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="settings_mnu_smsverificationphonenumber-link3"href="/ebank/sms/verification/changePhoneNumber.ds?menuId=settings_mnu_smsverificationphonenumber">
+                                                <span>
+                                            Vaihda tekstiviestivahvistuksen puhelinnumero</span>
+                                        </a>
+                                        </li>
+                                    </ul> </li>
+                            <li aria-haspopup="false" >
+                                <a id="settings_mnu_encap-link2"  href="/ebank/encap/overview.ds?menuId=settings_mnu_encap">
+                                <span>
+                                S-mobiili</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="settings_mnu_myinfo-link2"  href="/ebank/myprofile/initMyAddress.do?menuId=settings_mnu_myinfo">
+                                <span>
+                                Omat tiedot</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="openaccount_minor-link2"  href="/ebank/openAccount/openAccountMinor.ds?menuId=openaccount_minor">
+                                <span>
+                                Lapsen tai nuoren pankkipalvelut</span>
+                                </a>
+                                </li>
+                            <li aria-haspopup="false" >
+                                <a id="mybank_mnu_agreements-link2"  href="/ebank/agreements/archive/list.ds?menuId=mybank_mnu_agreements">
+                                <span>
+                                Sopimukset</span>
+                                </a>
+                                <ul class="sub"> <li aria-haspopup="false" >
+                                        <a id="mybank_mnu_agreements_signing-link3"href="/ebank/agreements/unsigned/list.ds?menuId=mybank_mnu_agreements_signing">
+                                                <span>
+                                            Allekirjoitusta odottavat asiakirjat</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="mybank_mnu_agreements_signed-link3"href="/ebank/agreements/pending/list.ds?menuId=mybank_mnu_agreements_signed">
+                                                <span>
+                                            Allekirjoitetut asiakirjat</span>
+                                        </a>
+                                        </li>
+                                    <li aria-haspopup="false" >
+                                        <a id="mybank_mnu_agreements_product_cancellation-link3"href="/app/#/settings/agreements/product-cancellation?menuId=mybank_mnu_agreements_product_cancellation">
+                                                <span>
+                                            Tee peruutuspyyntö</span>
+                                        </a>
+                                        </li>
+                                    </ul> </li>
+                            </ul>
+                    </div>
+                    <!--//megaColLines -->
+                    </div>
+                    <!--//megaDynamic -->
+                    </div>
+                    <!--//mega -->
+                </li>
+            </ul>
+            </nav><!-- //navigation --></div>
+            </header>
+
+            <div class="grid-x">
+    </div>
+</div>
+
+        <main id="main" class="row main-container">
+            <div class="breadcrumbs-wrapper"></div>
+			<div class="columns main-content">
+			    <!-- <CMSCONTENT> -->
+<div class="l_cms__content l_cms__content--center_topbox l_cms__content--mybank l_cms__content-- clearfix"> <script
+				type="text/javascript">
+			$(document).ready(function() {
+								insertCmsContent(
+										"/ebank/cmscontent/get.ds",
+										"center_topbox", "mybank");
+							});
+		</script>
+		</div>
+	<!-- </CMSCONTENT> -->
+
+
+
+
+
+<p class="error width-full">
+    Tapahtui odottamaton virhe. Yritä myöhemmin uudelleen.</p>
+<div class="width-1 last" id="rightColumn">
+			            <script type="text/javascript">
+	$(document).ready(function(){ 
+		setTimeout(function() { // Wait for click handler to be attached
+	    $('ul.tabNavigation a.selected').trigger("click");
+		},1);
+	});
+</script>
+
+	<!-- [UnconfirmedPaymentsBoxLite] -->
+	<!-- [/UnconfirmedPaymentsBoxLite] -->
+<script type="text/javascript" src="/theme/subapplications/agreements/js/notification-events.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+
+<div id="agreements_notification_box" style="display: none;">
+    <div class=" ">
+        <div  class="c_box width-1 ">
+            <div class="c_box__header ">
+                    <h2 class="c_box__heading">
+                        Allekirjoitusta odottavat asiakirjat</h2>
+                </div>
+            <div class="c_box__content h  c_box__content--no-padding c_box__content--no-foot  txt">
+                        <p>Sinulle on allekirjoitusta odottavia laina-asiakirjoja.</p>
+                <a href="/ebank/agreements/unsigned/list.ds">
+                    Siirry allekirjoittamaan</a>
+        </div>
+
+            <div class="c_box__bottom  c_box__bottom--no-foot   ">
+                </div>
+        </div>
+    </div></div><script type="text/javascript" src="/theme/subapplications/sloan/notification-events.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+
+<style>
+    #application_notification_box .unread {
+        font-weight: bold;
+    }
+
+    #application_notification_box .tooltip-trigger {
+        color: #2d6f13 !important;
+    }
+</style>
+<div id="application_notification_box" style="display: none;">
+    <div class=" ">
+        <div  class="c_box width-1 ">
+            <div class="c_box__header ">
+                    <h2 class="c_box__heading">
+                        Hyväksyttävä S-Laina-hakemus</h2>
+                </div>
+            <div class="c_box__content h  c_box__content--no-padding c_box__content--no-foot  txt">
+                        <div id="application-links-placeholder"></div>
+        </div>
+
+            <div class="c_box__bottom  c_box__bottom--no-foot   ">
+                </div>
+        </div>
+    </div></div><script type="text/javascript"
+        src="/theme/subapplications/credits/js/offer/notification-events.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+
+<div id="loanOffer_notification_box" style="display: none;">
+    <div class=" ">
+        <div  class="c_box width-1 ">
+            <div class="c_box__header ">
+                    <h2 class="c_box__heading">
+                        Lainatarjoukset</h2>
+                </div>
+            <div class="c_box__content h  c_box__content--no-padding c_box__content--no-foot  txt">
+                        <div id="loanOffer_notification_box_external" style="display: none;">
+                <a id="notification_links_external" class="link" href="
+                 /ebank/api/sso/auth/loanOffer.ds?reentryPath=%2Febank%2Faccountview%2Foverview.do">
+                    Tutustu lainatarjoukseen </a>
+            </div>
+            <div id="loanOffer_notification_box_internal" style="display: none;">
+                <a id="notification_link_internal" class="link" href="/ebank/loanoffer/view.ds">
+                    Tutustu lainatarjoukseen </a>
+            </div>
+        </div>
+
+            <div class="c_box__bottom  c_box__bottom--no-foot   ">
+                </div>
+        </div>
+    </div></div>
+<script type="text/javascript"
+        src="/theme/subapplications/credits/application/loan/sloan/ongoing-loan-notifications-events.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+
+
+<div id="sloan_notification_box" style="display: none;">
+    <div class=" ">
+        <div  class="c_box width-1 ">
+            <div class="c_box__header ">
+                    <h2 class="c_box__heading">
+                        S-Laina-hakemus</h2>
+                </div>
+            <div class="c_box__content h  c_box__content--no-padding c_box__content--no-foot  txt">
+                        <a class="link"
+                   href="/ebank/credits/application/loan/sloan/show.ds?applicationId=">
+                </a>
+        </div>
+
+            <div class="c_box__bottom  c_box__bottom--no-foot   ">
+                </div>
+        </div>
+    </div></div><!-- <CMSCONTENT> -->
+<div class="l_cms__content l_cms__content--rightbox l_cms__content--mybank l_cms__content-- clearfix"> <script
+				type="text/javascript">
+			$(document).ready(function() {
+								insertCmsContent(
+										"/ebank/cmscontent/get.ds",
+										"rightbox", "mybank");
+							});
+		</script>
+		</div>
+	<!-- </CMSCONTENT> -->
+
+
+
+
+
+<input id="demo" type="hidden" value="true" readonly/>
+<input id="proxy" type="hidden" value="https://chat.inet.s-pankki.fi" readonly/>
+<input id="state" type="hidden" value="AWAITING_VISITOR_ID" readonly/>
+<input id="authenticationLevel" type="hidden" value="LIGHT" readonly/>
+<input id="environmentProfile" type="hidden" value="prd"/>
+<input id="boostInit" type="hidden" value="false" />
+
+<div id="authElement"></div>
+</div>
+			    <!-- <CMSCONTENT> -->
+<div class="l_cms__content l_cms__content--center_bottombox l_cms__content--mybank l_cms__content-- clearfix"> <script
+				type="text/javascript">
+			$(document).ready(function() {
+								insertCmsContent(
+										"/ebank/cmscontent/get.ds",
+										"center_bottombox", "mybank");
+							});
+		</script>
+		</div>
+	<!-- </CMSCONTENT> -->
+
+
+
+
+
+<br class="clear">
+			</div>
+        </main>
+        <footer class="cf-bottom ">
+            <div class="content">
+                <div class="grid-x horizontal">
+	<div class="cell large-2 print-link">
+		<script type="text/javascript">
+			document.write('<a href="javascript:print()">Tulosta sivu<\/a>');
+		</script>
+		<noscript><div>&#160;</div></noscript>
+	</div>
+	<div class="cell large-7">
+		<span class="u_border-right u_padding--horizontal--medium">
+			<a href="https://www.s-pankki.fi/fi/arjen-raha-asiat/turvallinen-pankkiasiointi" target="POP" onclick="return openIt(this.href);">Turvallisuus</a>
+		</span>
+		<span class="u_border-right u_padding--horizontal--medium">
+			<a href="https://www.s-pankki.fi/fi/ehdot-ja-muut-asiakirjat/" target="POP" onclick="return openIt(this.href);">Yleiset ehdot</a>
+		</span>
+		<span class="u_border-right u_padding--horizontal--medium">
+			<a href="https://www.s-pankki.fi/hinnasto" target="POP" onclick="return openIt(this.href);">Palveluhinnasto</a>
+		</span>
+		<span class="u_padding--horizontal--medium">
+			<a href="#" onClick="UC_UI.showSecondLayer();">Evästeet</a>
+		</span>
+	</div>
+	<div class="cell large-3 u_text-align--right">
+		<span class="u_margin-right--medium">14.10.2026 klo 16:11</span>
+		© S-Pankki Oyj</div>
+</div>
+
+<div class="c_disclaimer">Rahastoja hallinnoi S-Pankki Rahastoyhtiö Oy. S-Pankki tarjoaa myös <a href="https://www.s-pankki.fi/fi/saastaminen-ja-sijoittaminen/yhteistyokumppaneiden-rahastot/" target="new">yhteistyökumppaneiden rahastoja</a>.</div>
+</div>
+        </footer>
+
+        <div class="versionInfo" role="complementary">
+            </div>
+
+        <div id="session-dialog" style="display: none;"></div>
+        <div id="common-dialog" style="display: none;"></div>
+        <div id="dialog-confirm" style="display: none;"></div>
+
+        <script type="text/plain" data-usercentrics="Piwik">
+        var analyticsSessionKey = "";
+        var analyticsUID = "";
+        var analyticsPrivacyFlag = "";
+        var pSiteID = "1";
+        var _paq = _paq || [];
+        _paq.push(['setCustomDimension', 1, "S-Pankki henkilÃ¶as"]);
+        _paq.push(['setCustomDimension', 2, 'demo_']);
+        _paq.push(['setCustomDimension', 3, '/fi/_demo']);
+        if (analyticsUID) {
+            _paq.push(['setUserId', analyticsUID]);
+        }
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="/theme/js/";
+            _paq.push(['setTrackerUrl', 'https://online.s-pankki.fi:443/piwik/log.do?sessionKey='+analyticsSessionKey]);
+            _paq.push(['setSiteId', pSiteID]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="https://online.s-pankki.fi:443/piwik/log.do?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <script type="text/javascript" src="/theme/subapplications/comp/mainLayout.js?version=RC-release-2026.10-20261007212654EEST-b475bec2"></script>
+    </body>
+</html>

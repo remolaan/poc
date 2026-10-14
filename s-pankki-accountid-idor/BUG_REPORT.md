@@ -53,6 +53,29 @@ Live results (tokenless GET, same session, 2026-10-14):
 
 Same object-key, same missing ownership check, another downloadable data artifact — see `evidence/14_csv_export_302_flow.txt`.
 
+## Why the PDF shows 0,00 — and the non-zero proof
+
+The fees PDF shows `0,00` in every row **because of the document type, not because the account is empty**. `getReport.ds` returns the **PAD fee statement** (bank's own Swedish header: *"Redovisning av avgifter"* = fee accounting) — a fee/interest statement, not a balance statement; it itself says balance/transactions live in the separate account statement. The demo customer has a basic account **with no paid fee package**, so every fee row is legitimately `0,00`. Verified across years (fresh captures 2026-10-14):
+
+| Probe | Result |
+|---|---|
+| `year=2025` | 116,300 B PDF, all rows 0,00 (`evidence/01,02`) |
+| `year=2024` | 116,299 B PDF, **also** all rows 0,00 (`evidence/19`) — incl. a genuine backend row (period 01.01.2025–22.05.2017, 0,0100 %) |
+| `year=2026` (unfinished) | 56,644 B HTML page, not a PDF (`evidence/20`) |
+| invalid id | 509 B HTML error — validity oracle (`evidence/05,06`) |
+
+**The non-zero proof** (full tables in `evidence/21_nontzero_proof_summary.md`):
+
+1. **Live server-rendered balances** (`evidence/16`, 68,139 B front page captured 2026-10-14): ACC1 FI96…03 → **+5 500,00**, ACC2 FI74…11 → **+5 500,00**, total **+11 000,00**, card 4318 12\*\* \*\*\*\* 9012 at **6 098,52**.
+2. **Context-switched transaction pages, fresh, same day, single session** — after `GET /ebank/accountview/showAccountDetails.do?accountId=<A>` (plain GET, no CSRF), parameterless `GET /ebank/account/fetchTransactionList.do` returns **different real data per accountId**:
+   - ACC1 page: **75,316 B, 9 non-zero transactions** with dates 30.9.–9.10.2026 and counterparty names (`evidence/17`): e.g. `9.10 −500,00 OMA TILISIIRTO MAIJA MEIKÄINEN`, `7.10 −100,50 TILISIIRTO MATTI MEIKÄINEN`, `1.10 −110,00 KORTTIOSTO ELÄINKAUPPA HOPE`, `30.9 +105,45 LAPSILISÄ KELA`.
+   - ACC2 page: **81,368 B, 15 different non-zero transactions**, all 9.10.2026 (`evidence/18`): e.g. `−250,00 TILISIIRTO`, `−18,65 PALKKA Sokos verkkokauppa`, `−100,00 VUOKRANMAKSU`.
+   - Different sizes, different md5s, different row sets — the page is keyed to the opaque `accountId`.
+3. **CSV export range oracle**: 2026 range → 302 data flow (rows exist); 2025 range → header-only CSV (no 2025 activity — consistent: all demo activity is 2026, the year the fee statement does not cover).
+4. **Third URL-driven endpoint** (found while verifying): `initTransactionDetails.do?accountId=<A>&rowNo=<N>&type=trans&archivecode=<per-tx code>` — per-transaction detail, plain GET, no CSRF token (demo profile hides the detail table behind onboarding).
+
+Operational note: `accountview/showAccountDetails.do?accountId=<A>&back=mybank` (the link the front page itself uses) is the **reliable** context setter; the `account/` variant intermittently kills the session (companion report). The direct `fetchTransactionList.do?accountId=<A>` param is **ignored** (response byte-identical, same md5, to the last session-context account's page) — the session context, not the URL param, drives that endpoint; the PDF endpoint, in contrast, is purely URL-driven.
+
 ## Why Critical
 
 1. **Object-level authorization missing on the primary account key.** The server accepts *any valid* `accountId` on the read chain — foreign accountIds are neither rejected (403) nor flagged; the endpoint simply generates the data for it. The demo user owns two accounts (ACC1 `96c143b2…`, ACC2 `d62a61a6…`, different IBANs) and the full chain (context-set → data page → report → export) follows whichever `accountId` is supplied.
@@ -103,4 +126,10 @@ The e-banking back-end uses one opaque `accountId` as the universal reference to
 - `evidence/13_csv_export_invalid_accountId_56kb_error.html` — invalid accountId → error page (oracle)
 - `evidence/14_csv_export_302_flow.txt` — full CSV-export flow analysis (incl. 302 → one-shot processor)
 - `evidence/15_app_csv_export_link_js.js` — app JS showing the exact tokenless GET the CSV button fires
+- `evidence/16_frontpage_live_nonzero_balances.html` — live front page: +5 500,00 / +5 500,00, total +11 000,00, card 6 098,52 (non-zero balances)
+- `evidence/17_txlist_FRESH_ACC1_FI96_nine_nonzero_transactions.html` — fresh ACC1 tx page: 9 non-zero transactions w/ counterparties
+- `evidence/18_txlist_FRESH_ACC2_FI74_fifteen_nonzero_transactions.html` — fresh ACC2 tx page: 15 different non-zero transactions (diff md5/size/rows)
+- `evidence/19_pad_fees_report_year2024_ACC1_zero_fees.pdf` — 2024 fee PDF: also all zeros (fee statement, no fee package)
+- `evidence/20_pad_fees_report_year2026_returns_HTML_demo_page.html` — 2026 (unfinished) → HTML, not PDF
+- `evidence/21_nontzero_proof_summary.md` — why the PDF shows 0,00 + full non-zero proof tables + `initTransactionDetails.do` endpoint + context-setter behavior notes
 - `evidence/test_log.txt` — complete test matrix, md5s, endpoint semantics, leak/oracle analysis

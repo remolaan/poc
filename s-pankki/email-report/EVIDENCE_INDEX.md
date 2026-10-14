@@ -27,6 +27,17 @@ All artifacts captured 2026-10-14 against `online.s-pankki.fi` (program test acc
 | `14_csv_export_302_flow.txt` | 1,905 B | Full 302 → `processTransactionList.do` flow for a data-bearing range (demo one-shot restriction documented) |
 | `15_app_csv_export_link_js.js` | 2,746 B | Bank's own JS building the tokenless CSV export GET (exact URL/params) |
 
+## Non-zero proof & "why the PDF shows zeros" (added 2026-10-14)
+
+| File | Size | What it shows |
+|------|------|---------------|
+| `16_frontpage_live_nonzero_balances.html` | 68,139 B | Server-rendered front page: ACC1 FI96…03 +5 500,00; ACC2 FI74…11 +5 500,00; Yhteensä +11 000,00; card 4318 12\*\* \*\*\*\* 9012 at 6 098,52 — live non-zero balances |
+| `17_txlist_FRESH_ACC1_FI96_nine_nonzero_transactions.html` | 75,316 B | **Fresh** context-switched transaction page for ACC1: 9 non-zero Oct-2026 transactions with counterparty names (KELA, Osuuskauppa Suomi, Modern Living, Eläinkauppa Hope, Huonekaluliike Jakkara, MAIJA/MINNI/MATTI MEIKÄINEN) |
+| `18_txlist_FRESH_ACC2_FI74_fifteen_nonzero_transactions.html` | 81,368 B | **Fresh** context-switched transaction page for ACC2: 15 different non-zero transactions (e.g. −250,00 TILISIIRTO, −18,65 PALKKA Sokos verkkokauppa, −100,00 VUOKRANMAKSU) — different md5 & data than #17 |
+| `19_pad_fees_report_year2024_ACC1_zero_fees.pdf` | 116,299 B | `getReport.ds year=2024` — **also** all-zero fees, proving the zeros are per-year fee data (no fee package), not an empty account; contains a genuine backend row (01.01.2025–22.05.2017, 0,0100 %) |
+| `20_pad_fees_report_year2026_returns_HTML_demo_page.html` | 56,644 B | `getReport.ds year=2026` (unfinished year) → HTML page, not a PDF — report exists only for finished years |
+| `21_nontzero_proof_summary.md` | — | Full explanation: why the fees PDF shows 0,00 (fee statement "Redovisning av avgifter", no fee package, 2024/2025/2026 probes) + all non-zero captures tabulated + the third URL-driven endpoint `initTransactionDetails.do?accountId&rowNo&archivecode` + demo-behavior notes (reliable context setter `accountview/showAccountDetails.do`; direct `fetchTransactionList.do?accountId=` param is ignored — context drives the data) |
+
 ## Logs & PoC
 
 | File | What it is |

