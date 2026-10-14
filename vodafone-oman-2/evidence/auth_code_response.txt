@@ -1,0 +1,1 @@
+{"redirectUri":"https://esgw.pr.itcloud.vodafone.om/authorized?code=ac_5hiy2Lagt6vRSTOXvOjfuXysMbVsaOBuLDhxmvLJ&state=6046c257-d3c2-4dfc-a494-9170775b9ea2"}

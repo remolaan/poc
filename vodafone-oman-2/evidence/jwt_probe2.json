@@ -1,0 +1,22 @@
+{
+ "vfo02/api/public/profile/v1": {
+  "http": 500,
+  "raw": "Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.zentity.gw.exception.ExceptionDescription] for value [com.zentity.gw.exception.BadRequestException@676c973a]; nested exception is java.lang.IllegalArgumentException: Unmatched braces in the pattern."
+ },
+ "vfo02/api/public/profile/v1/paymentMethods": {
+  "http": 500,
+  "raw": "Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.zentity.gw.exception.ExceptionDescription] for value [com.zentity.gw.exception.BadRequestException@abe03e]; nested exception is java.lang.IllegalArgumentException: Unmatched braces in the pattern."
+ },
+ "vfo02/api/public/profile/v2/kyc/configuration": {
+  "http": 400,
+  "raw": "{\"errors\":[{\"message\":\"Unsupported HTTP method GET\"}]}"
+ },
+ "vfo02-noauth/api/public/profile/v1": {
+  "http": 401,
+  "raw": "{\"errors\":[{\"message\":\"Unauthorized\",\"action\":\"LOGOUT\"}]}"
+ },
+ "vfo03/chat/customer/v1/agents/availability": {
+  "http": 200,
+  "raw": "{\"anyAgentAvailable\":false}"
+ }
+}

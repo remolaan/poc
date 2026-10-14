@@ -1,0 +1,152 @@
+{
+  "ts0": "12:33:07Z",
+  "steps": [
+    {
+      "step": "start",
+      "ok": true,
+      "i": 0,
+      "ts": "12:33:08Z"
+    },
+    {
+      "step": "try",
+      "code": "8311",
+      "src": "initial",
+      "http": 200,
+      "raw": "{\"temporaryAccessToken\":\"N2hDDTsZ8zlOo83udLiRfAAAAAAAB5hsY_VFwcAojDuSGvSG-zPqnPPNzpahRGbKn369Isq8qX9eTsp25RJjZogoE2FDNhUKuiEJxddHbYLp60IjeuSli2SYbyF0L1GBrxg1sj0Uy946sqQuJz0NQyHIN2Dj5Rhk9mSdoA6B2NsqDBlWxZPmUYT2fXUq7P7r_e4zv-KKL-QRTD6twzVEVf5ZQARdgGvtYXNS-KrONVOE8VsWrt_GX0ZPqfnuPbZPmjKXSS_iq6Y7FkSb1Q_-6fEVzFOVRZ5V3N2tgA3XXspgzLHJmyt0adHqUJtfUenUhhjWwHTYCTCOcmWSDoxkmJVXJVq92k6fP_i5GYev0Us1iGvfaAN8oAH5qbyRwNVjrKdUplKH2AqtmVbC7wsFSWPhg7kXP3_EEaSARUrU4yB-k1fgkmHFumiTak4OEatEAfJbzsDBObBwX-kuTf1QKhTILAL-BivuGFBB6KmVf01UT-_04DnHoNOdkj4RJXjPq511uiT_rMp9R0GjjlyJ1XCyPc7A7nOdgYvLH1n9XyWexA4kaL8smobISwagf48xLCENjAMFvcUdsOr9R9DivGrLy-1oNI3ip9ICijWboUDuA7tnk7R2JvSGyfIXJ2wUDK0O073008gmglRNWukKuXINCWiwaFM_xFhCOSzob2pemeg7GJbUeLe3uXsktuztLZcDHbj0U77FPgwGQ2w9dZ8fCOPOVYHxc8_6SCWnhuPvKF1NSatTKggVpSReJtBaM43dqwKisz25_DQjRtq9sTZcv7kMWq52z5uWTplxXqi_FBlh2jIU4HJO8RoOnVgmM5crtC7jXtqxDWYsKcyMTPy7RtavH_A4mMj4gWleoKroR8HbPBzLkyxVSD33-qLxsolBl7OgzjFKo9n1oIil3taR6V8Wd_bCOOsnia6DV2Ptr8e7GnIoxQoCskhj9tWqaz5NLYWG-E0-GJtKzKfOLJokFZOgZjEtsqO7V4wGvxOhhTg7-NV5cmwykThtb8tHhCOYddU4R1OUO0UXU-9xYQ5uw_kHtrPeNy4JYGSMQGDX1DHnLuFuqg\",\"nextStep\":{\"emailOtpMethod\":{\"secretPayload\":\"Y9yMvBXHwW-gQX_FUJWYgAAAAAAAB5hso3dr2BH9KhuFx75yhVRP7IznYEJwpyiVbdtortSl_Zaarnd0WzTRfOL9YUNxdsxcQjmvw-7aT9ZqnwUQGxb6Fz5McUrTUR3w5vEfY5tFiMggkbJMOxxy4SgGwfQWOPbmCrDOiNTAOlf4amGlMPTmQvQYi4LUupd2TVUhHgbJ7016ok9OKAG07ZMOD0hT-kV_yGJVCX3lXboabUBTfHAQLQ\",\"otpStatus\":\"OTP_MISMATCH\",\"otpExpiresIn\":0,\"otpExpiresAt\":\"2026-10-14T12:33:12.110534Z\",\"otpAttemptsLeft\":0,\"otpResendIn\":0,\"otpResendAfter\":\"2026-10-14T12:33:12.110287Z\"}}}",
+      "otpStatus": "OTP_MISMATCH"
+    },
+    {
+      "step": "try",
+      "code": "8311",
+      "src": "initial",
+      "status": "OTP_MISMATCH",
+      "ts": "12:33:12Z"
+    },
+    {
+      "step": "try",
+      "code": "2352",
+      "src": "initial",
+      "http": 200,
+      "raw": "{\"temporaryAccessToken\":\"OIaC6XRwy2N_yv-wqyoJRgAAAAAAB5hs5Xeyi_4M9KZ5YaxIttwNMy-tivYEljP_4CULXBvbMvOELEYCSqlbj2fqq5ey_-EK5gzFAyNCRSu3Hf_q0g59jrX0HZAk1Xe2Cn1v1JoIVzuu6PYvkBo0C_pcEewe3hgLtuXGd-eem6A-Bo3YWWU8Cd9bSnxz1-ZS8osDcyyoYI53SCo96LkuFKXnxHAs1PTmLB05it0bri3FmZnI-glAw4G8GHzKVUvFxXROOp9Igu_eTDjVV7ty2rRlaGp6lpq76PnCbIB8zKiSQMNSIQaIR67_wPlapdziCYxCnFQ9bkDIQc9mDZnhnLXWrvJZ7WIU4m4Fe_KNZZvE8pxrJm8b8GjqIq_ip-CoQH4ESiCRcSFruiJ6MAAPTYyUpL-GSVfYhSpkRAd5l1q2oL9UhCWK0vjbUoQo_GSrZK9xnMdgA4jBa4PlhJ12dFAuWR5RkDGC3DXKTslX3cYeUS0tBuY9HsYMSp3FJIwi8k9AeaqtWD_9dno2faAltg8GARBKUgiJJqv7OElurK9LGe0mz_mL3tkEksRDlRF-GoxqR-7YsPn_ZMfL4lMjwh5hJSo3Wh-uX7JK0tl4GVI0TS1fp7z89Ee9VdtystKxcZR1406P5vTWWPY9D4SJYWNvL5wn1aZyCZlWVlWlOykMg_5hvkk0ZrP2sGUhx2lcFYudxAYJrL8GVS7CIBHq-IdVx2RsbLpUt8hjY0AbTppMEbb1_YAxo4lp2hbG2sIfd9BdhM9rEIF9-gAHCshx29jPeQZv6sTMB2TvQcF2rOUH0AckWLCAi9fAIOOrj8gyeg-eEHNdsJqty85lFCowxURAR0Z5wmalP9M266sVnCxnAEi23GNenKrIektMuQtPGAHILr2Iwn10FICQMfNjhXD5HVxYsv-BK99eSmnPQSLG2WG10T1-PdupoILDXfClSoQ3vmEDqWHC_yGscv8zi5Q42EWK8gZ7y5HTZs2SPR7uMmYRTy9vViSbd-1-poJPmLajOgCslOV5yK_y7Mgc9ESxB47VDp_qhYV_dJAHHP4QXz47TnujtA\",\"nextStep\":{\"emailOtpMethod\":{\"secretPayload\":\"EE0tQj7W22PRtyX0lCS-hQAAAAAAB5hsbzt9MwmdISwNLGXdoXQodlkUcknzJ6KxucWsXE1TYjzu7BVut6haPCwhuY5Cq8J2LZnmC6-op0NTkw2yAd9aqkN1bBMoLAyAEgeQ5pc-i46344jLG4IHcRAwV5Mm3HpGTo24D5_ZW-qsT90-RL28Dk8hVruF2d6FZHOZkIo4vk2rUZsaJaC7P7-gUZHlJcvy4X6Ii0XswwI370WWtx4HYA\",\"otpStatus\":\"OTP_MISMATCH\",\"otpExpiresIn\":0,\"otpExpiresAt\":\"2026-10-14T12:33:16.062571Z\",\"otpAttemptsLeft\":0,\"otpResendIn\":0,\"otpResendAfter\":\"2026-10-14T12:33:16.062377Z\"}}}",
+      "otpStatus": "OTP_MISMATCH"
+    },
+    {
+      "step": "try",
+      "code": "2352",
+      "src": "initial",
+      "status": "OTP_MISMATCH",
+      "ts": "12:33:16Z"
+    },
+    {
+      "step": "try",
+      "code": "9023",
+      "src": "initial",
+      "http": 200,
+      "raw": "{\"temporaryAccessToken\":\"gMc3yjdOPvTPwvHs73DQpwAAAAAAB5hsnvOWDerP9kp1QLO22BUJLGwq4YubRXN1cf3wba4TPKgDtBCuYkwu_kSKZswPKmTX1L8Mzo6fAidiNxzIdSR8-6OPuW-ICsiY0cUw7Sh7PRMEu0wCmItO9DVM5AvDRIly1j3uhv1Jrc0o_lHT7cjnV3eD9ME3RoN82JZOwFitEtbsDYWUvRpcb555E_CZE4v-NAG3GNiuNrGlPZiR0TnJzAwxG4wjCRa0K8A9LHjfjWo3YUZHpeSKWT35PYzuNNyjs7kGZtpNZv2jn_sqZ26ADxggY-WUrlJM4pDb1nuzO3KLDsSFqUqXqXYfMdLjlm2cNXybp9g5V-SnejZPxtnHAnu4pQSoVCTUocGe53wJAxLv5j54BY3Gxe3SFNE9ZKvfkigUQZBHxqkJ6vEds_7vFXiKDCzqtcHLViylN45C2vz04PgPSUYipyMXiv2jFW8oII9fomf-e-GmeH0X1RyOqxfZzUvKFHHjPFSd4f3jr0SRq6N4yBeMo5LDyRLdIEgioB2NeuLMlqc2uBWCsPQR5zNCUdsUbbRHzwTAxeZEXA0skaESH7K_T1D8KstNi5ztIXbWZBUi8n4_yiZJ80RCQ0DG_ze_kEYjxD2VuI8bSWsjAxkgBy0iGxmmYspFS-QhF4JQejuDlzW8GJt9DGox20v-WqtC5GdtyCCZW2RXUDygHY5xV38_a5_LH_QUl7q_tKLipZdX7leV4Svs1jAu7zYacgqXlvl-vO6NJp5OFvm5aZcwNAK78yoi3hWcUkFG4TQtsFTWmyn-Ci2-O5JAvZHRdKSVbWa0i7sXa9PNE2p7hccGKVmdfZC9RnAZ_uuGVsY0WoPbZaiYAty8j3nPvl8SllYdXIzu9bRlhnrxzRaE0CworuaaIWkRPlqWOHvp-RuOPGTHTyUKbBGmF6pFKvqvcOgRQ1hUbBlkSWMisxpwWq84jZEAUH6a25qqodrBvaTzN28f26BPSoHeVshtqFQ2gqFfG_aSpLa5dWcAPofmDHG1ryT0bVPofujBvmiXIzRjpBfCIKwdRajSP3pfEw\",\"nextStep\":{\"emailOtpMethod\":{\"secretPayload\":\"N0ALpZp_iJkReAZj8GmpjQAAAAAAB5hs-VIdGlpJal4EQUOJc1QS1kbCCo7Zhmts4TiGIspM1Q99Zn5skZgPRnK08FZkIs3yME6cvnU9T1st0n__l8nbDwf3izu8HB8IiAKpWYmiagQZ_J10xew6g_e_iSVWZU_jxeVOgxiHTUvJAq8c0sqzem8bMNiznF4DbWTS1RlUZ2RL-XdU1QLzQHvCi1BQOkejPb0Se_iFfgMY16wowf84Kg\",\"otpStatus\":\"OTP_MISMATCH\",\"otpExpiresIn\":0,\"otpExpiresAt\":\"2026-10-14T12:33:20.007933Z\",\"otpAttemptsLeft\":0,\"otpResendIn\":0,\"otpResendAfter\":\"2026-10-14T12:33:20.007687Z\"}}}",
+      "otpStatus": "OTP_MISMATCH"
+    },
+    {
+      "step": "try",
+      "code": "9023",
+      "src": "initial",
+      "status": "OTP_MISMATCH",
+      "ts": "12:33:20Z"
+    },
+    {
+      "step": "try",
+      "code": "4058",
+      "src": "initial",
+      "http": 200,
+      "raw": "{\"temporaryAccessToken\":\"ZJ4p7s9IGZICLnW6aGkGWAAAAAAAB5hsMeY1_dYUqjHal67lHne4aV-3KWwxkqPruiYf2aRfiVMZm4ToNQyb-rrT1m35oJmfYJkoJFR54f1Z6UGSbHiXXxuvivNI2BqZ6wScJ-8SvkJlDwrHeGuRYeNdW-BoSxWYNCnbWMelfiFsx36-UhYC0XspPiejPl50WldHOTa-4OBtk6ucoN5XILGbFp1JzT-99JX1mNgS8iguB8ypDJ-dov4has2sx6-7OdDVKQG5xdjBI9tBiDq2mxOIt6f5DEWuqBaRq-NrxrxPwfNKFMR7x287-NyGMUOIBwCtqDGuXzhdE2y3130LffTodx_T589-d5dLy2-vdiioUm7L83m3GfcOVJUKpeg9SfBSIQK_-1WFMyshEZosxQn4g-UMuac_boOg8a6uFOshfgLXb3ADLpeL_NshNJ2CkUAsqs9im63WbZVbwXzCKbTodNEzfC5dc2B-YBXIITcxdTcBRQ6r4eRrq2q-doiIsv2yDD5vdJrTnzK8zgsOvC41nTZuBFHoLk6_KdD3uprbXv4wn0tQYzb7yOvi1zRfNI5imm3IYaqWsuGsAelJBei50ab4xDTVk5K5-6djGYRU2MBwaefrOckNAV2XiLL6Ba8jJTuuaagRkjSycjgFMduI-Aox4kymnLckoGDSSjqnns-gYEy7NFVukN4mvcimAS7ocYbpFLiLl4h0KPB3gKqXpu3gVgSMusVUpoC2qdMTN6_Jarl0ZBt6FldljCwxLmSZU3JxsVi-pv8QTHBuEZmZ6UYeMOhyS4KMUEkKdEuoBpU7334xB_IinofkTXsTukqtcSHh1lH3ls-68J3kEOeT4P3Irp3AopZQKUILPOSVvLlNpO6ws3xd3M37SSHWzTyv7WD-EDmjaCbEIKcl_v0H2qqlKT2VaG1KpzSMbbsmKu6BmJR6Qd7W9i6DRV0_bDiVCLG3UhkB74aSks2eFkl-SH_CN-vStrYr3RRTTvbQ8Xl-b9KlVP0z0KaWOjRpIfKjKlh5FnUIhj0338l0eiapOBS6B7bMyqg8i9FV-SIDAGreA-ks8g\",\"nextStep\":{\"emailOtpMethod\":{\"secretPayload\":\"kNWFD6L36zaCzQuQcWCb-AAAAAAAB5hsmgs15Fqub1jFhyOMZ5gkf1Mniqi_Sf_eSAUVfSJT_dmyffA6j3y-iXn3_3VSIK1Wzx9CuI9jvdWdz8ORqXeZ2kZIWaG1KCUbjXkrmG-jATwHx3vybtC1QfENu8rnWs-nZfOK9XpMs8qvbDcQ-cxZ2SKzcMrSfl1-yJUeUsFCw05j091rfjeF2QJwWFhvnplfZKIf8yRjRUHT-GaHQUUlEQ\",\"otpStatus\":\"OTP_MISMATCH\",\"otpExpiresIn\":0,\"otpExpiresAt\":\"2026-10-14T12:33:23.963752Z\",\"otpAttemptsLeft\":0,\"otpResendIn\":0,\"otpResendAfter\":\"2026-10-14T12:33:23.963534Z\"}}}",
+      "otpStatus": "OTP_MISMATCH"
+    },
+    {
+      "step": "try",
+      "code": "4058",
+      "src": "initial",
+      "status": "OTP_MISMATCH",
+      "ts": "12:33:24Z"
+    },
+    {
+      "step": "resend",
+      "cyc": 1,
+      "status": null,
+      "exp": 899,
+      "rsend": 59,
+      "ts": "12:33:30Z"
+    },
+    {
+      "step": "new_inbox_code",
+      "code": "3140",
+      "ts": "12:33:46Z"
+    },
+    {
+      "step": "try",
+      "code": "3140",
+      "src": "self_issue_1",
+      "http": 200,
+      "raw": "{\"redirectUri\":\"https://esgw.pr.itcloud.vodafone.om/authorized?code=ac_gHE5SKDo6d45ujZkULDr2h5VN3OX6H0UsVQIGWhx&state=e18c8866-26da-4294-96b4-d5471ceee4fe\"}",
+      "otpStatus": null,
+      "accepted": true,
+      "redirectUri": "https://esgw.pr.itcloud.vodafone.om/authorized?code=ac_gHE5SKDo6d45ujZkULDr2h5VN3OX6H0UsVQIGWhx&state=e18c8866-26da-4294-96b4-d5471ceee4fe",
+      "jwt_prefix": "eyJraWQiOiI2YjVlZTE3YjE2YjQ0YTBmYTJlN2Fj"
+    },
+    {
+      "step": "try",
+      "code": "3140",
+      "src": "self_issue_1",
+      "status": null,
+      "ts": "12:33:48Z"
+    },
+    {
+      "step": "evidence",
+      "ep": "vfo02_profile",
+      "http": 500,
+      "raw": "Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.zentity.gw.exception.ExceptionDescription] for value [com.zentity.gw.exception.B",
+      "ts": "12:33:52Z"
+    },
+    {
+      "step": "evidence",
+      "ep": "vfo03_agents",
+      "http": 200,
+      "raw": "{\"anyAgentAvailable\":false}",
+      "ts": "12:34:03Z"
+    }
+  ],
+  "claims": {
+    "sub": "inet:e905d95f-31e2-4899-ab18-dfed1b52e6f3",
+    "aud": [
+      "MVA_ZDS",
+      "DXL_SPM",
+      "DXL_ZMS",
+      "CHAT",
+      "MVA",
+      "DXL_OTP",
+      "DXL_CXC",
+      "DXL_SCM",
+      "<VFO>"
+    ],
+    "c_hash": "qjOKZNnZGndKn7UulljmEA",
+    "azp": "MVA",
+    "auth_time": 1791981226,
+    "scope": [
+      "customers"
+    ],
+    "iss": "https://isgw.pr.itcloud.vodafone.om",
+    "exp": 1791983027,
+    "customer_id": "e905d95f-31e2-4899-ab18-dfed1b52e6f3",
+    "iat": 1791981227,
+    "email": "h1bf4850864b@maxxspace.com"
+  },
+  "jwt": "eyJraWQiOiI2YjVlZTE3YjE2YjQ0YTBmYTJlN2FjMDE4MWM4NTBjYyIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJpbmV0OmU5MDVkOTVmLTMxZTItNDg5OS1hYjE4LWRmZWQxYjUyZTZmMyIsImF1ZCI6WyJNVkFfWkRTIiwiRFhMX1NQTSIsIkRYTF9aTVMiLCJDSEFUIiwiTVZBIiwiRFhMX09UUCIsIkRYTF9DWEMiLCJEWExfU0NNIiwiPFZGTz4iXSwiY19oYXNoIjoicWpPS1pOblpHbmRLbjdVdWxsam1FQSIsImF6cCI6Ik1WQSIsImF1dGhfdGltZSI6MTc5MTk4MTIyNiwic2NvcGUiOlsiY3VzdG9tZXJzIl0sImlzcyI6Imh0dHBzOi8vaXNndy5wci5pdGNsb3VkLnZvZGFmb25lLm9tIiwiZXhwIjoxNzkxOTgzMDI3LCJjdXN0b21lcl9pZCI6ImU5MDVkOTVmLTMxZTItNDg5OS1hYjE4LWRmZWQxYjUyZTZmMyIsImlhdCI6MTc5MTk4MTIyNywiZW1haWwiOiJoMWJmNDg1MDg2NGJAbWF4eHNwYWNlLmNvbSJ9.JklPT44CbJG2s6OVYbnuI0KGGNXRF32lTks0QcEe8O_LfE0lgr82wbc2OZcTt-jWXfA9TASbZz66swJqKZzTImIXODa8-xlwVKenNVkB2GmmehQ9nnVy9I1DCBAjEJXpAvqEKor2Qcm-Waym5HuiQTPYeZbHevoZ5FVMZ4TNisRAodfTF_7N89RT6y1Ooh15jxmw8WdDgTAe0E8zJbCMm2PQ1-mbgFAT7f7BiyBK0yLOeN9pofPkbHfzdm_ALKgupNgCphIYl2HSImpUeQzJ3PnMdrP-Y8t1tSEIglm65sPfMwfeYnMkklHAT17l0l9geovUuN0AsFNmbHfrFBHntA",
+  "evidence_vfo02_profile": {
+    "http": 500,
+    "raw": "Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.zentity.gw.exception.ExceptionDescription] for value [com.zentity.gw.exception.BadRequestException@1b26391d]; nested exception is java.lang.IllegalArgumentException: Unmatched braces in the pattern."
+  },
+  "evidence_vfo03_agents": {
+    "http": 200,
+    "raw": "{\"anyAgentAvailable\":false}"
+  },
+  "result": "JWT_OBTAINED",
+  "ts1": "12:34:03Z"
+}

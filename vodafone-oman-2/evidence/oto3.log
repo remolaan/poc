@@ -1,0 +1,16 @@
+[oto3] {"step": "start", "ok": true, "attempt": 0, "ts": "12:17:11Z"}
+[oto3] try 4032 (initial) -> OTP_MISMATCH
+[oto3] try 2315 (initial) -> OTP_MISMATCH
+[oto3] try 5260 (initial) -> OTP_MISMATCH
+[oto3] {"step": "self_issue", "cycle": 1, "ts": "12:17:23Z"}
+[oto3] {"step": "resend_resp", "cycle": 1, "status": null, "expiresIn": 299, "resendIn": 299, "ts": "12:17:29Z"}
+[oto3] {"step": "inbox_wait_timeout", "cycle": 1, "ts": "12:19:10Z"}
+[oto3] {"step": "self_issue", "cycle": 2, "ts": "12:19:10Z"}
+[oto3] {"step": "resend_resp", "cycle": 2, "status": "RESEND_LATER", "expiresIn": 193, "resendIn": 193, "ts": "12:19:16Z"}
+[oto3] {"step": "inbox_wait_timeout", "cycle": 2, "ts": "12:20:56Z"}
+[oto3] {"step": "self_issue", "cycle": 3, "ts": "12:20:56Z"}
+[oto3] {"step": "resend_resp", "cycle": 3, "status": "RESEND_LATER", "expiresIn": 86, "resendIn": 86, "ts": "12:21:03Z"}
+[oto3] {"step": "inbox_wait_timeout", "cycle": 3, "ts": "12:22:43Z"}
+[oto3] {"step": "self_issue", "cycle": 4, "ts": "12:22:43Z"}
+[oto3] {"step": "resend_resp", "cycle": 4, "err": "Expecting value: line 1 column 1 (char 0)", "ts": "12:22:49Z"}
+[oto3] DONE no_hit

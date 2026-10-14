@@ -1,0 +1,41 @@
+=== date ===
+2026-10-14 06:28:12 UTC
+
+=== access_token JWT claims (decoded) ===
+{
+ "sub": "inet:a84bafed-8be0-45de-91b8-83f279008261",
+ "aud": [
+  "MVA_ZDS",
+  "DXL_SPM",
+  "DXL_ZMS",
+  "CHAT",
+  "MVA",
+  "DXL_OTP",
+  "DXL_CXC",
+  "DXL_SCM",
+  "<VFO>"
+ ],
+ "c_hash": "xnOckgOgRiVY7FLoHwmAvw",
+ "azp": "MVA",
+ "auth_time": 1791959244,
+ "scope": [
+  "customers"
+ ],
+ "iss": "https://isgw.pr.itcloud.vodafone.om",
+ "exp": 1791961045,
+ "customer_id": "a84bafed-8be0-45de-91b8-83f279008261",
+ "iat": 1791959245,
+ "email": "h1reconbounty@maxxspace.com"
+}
+
+=== GET https://vfo03.vodafone.om/chat/customer/v1/agents/availability (with Bearer) ===
+200 (27b)
+{"anyAgentAvailable":false}
+
+=== GET https://vfo02.vodafone.om/api/public/profile/v1/paymentMethod (auth gate, POST-only endpoint) ===
+400 (54b)
+{"errors":[{"message":"Unsupported HTTP method GET"}]}
+
+=== same chat endpoint WITHOUT Bearer (for contrast) ===
+401 (79b)
+{"error":{"code":"authorization_unauthorized","message":"Access unauthorized"}}
