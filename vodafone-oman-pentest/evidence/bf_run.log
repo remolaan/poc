@@ -1,0 +1,221 @@
+[bf] {"kind": "milestone", "msg": "START email=h1bf4850864b@maxxspace.com workers=2 pipeline mode", "ts": "11:12:13Z", "elapsed": 0}
+[bf] +0m00s guesses=0 resends=0 errors=0 found=False
+[bf] {"kind": "milestone", "msg": "inbox audit started for h1bf4850864b@maxxspace.com", "ts": "11:12:13Z", "elapsed": 0}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=500 raw={\"errors\":[{\"message\":\"Internal server error\"}]}", "ts": "11:12:15Z", "elapsed": 2}
+[bf] +1m00s guesses=22 resends=1 errors=0 found=False
+[bf] +2m00s guesses=73 resends=2 errors=0 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:14:17Z", "elapsed": 123}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:14:49Z", "elapsed": 156}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:14:49Z", "elapsed": 156}
+[bf] +3m00s guesses=89 resends=2 errors=3 found=False
+[bf] {"kind": "milestone", "w": 0, "last": "0032", "guesses": 100, "ts": "11:15:33Z", "elapsed": 200}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:15:53Z", "elapsed": 220}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:15:54Z", "elapsed": 221}
+[bf] +4m00s guesses=117 resends=2 errors=5 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:16:57Z", "elapsed": 284}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:16:58Z", "elapsed": 285}
+[bf] +5m00s guesses=145 resends=2 errors=7 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:18:01Z", "elapsed": 348}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:18:01Z", "elapsed": 348}
+[bf] +6m00s guesses=169 resends=2 errors=9 found=False
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:18:18Z", "elapsed": 365}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:19:04Z", "elapsed": 411}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:19:05Z", "elapsed": 412}
+[bf] +7m00s guesses=194 resends=3 errors=11 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:19:22Z", "elapsed": 429}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:19:37Z", "elapsed": 444}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:19:39Z", "elapsed": 446}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:19:55Z", "elapsed": 462}
+[bf] +8m00s guesses=196 resends=4 errors=12 found=False
+[bf] {"kind": "milestone", "w": 1, "last": "5124", "guesses": 200, "ts": "11:20:17Z", "elapsed": 484}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:20:22Z", "elapsed": 489}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:20:40Z", "elapsed": 507}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:20:54Z", "elapsed": 521}
+[bf] +9m00s guesses=211 resends=4 errors=15 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc URLError: <urlopen error [Errno -3] Temporary failure in name resolution> raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:21:29Z", "elapsed": 556}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc URLError: <urlopen error [Errno -3] Temporary failure in name resolution> raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:21:36Z", "elapsed": 563}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc URLError: <urlopen error [Errno -3] Temporary failure in name resolution> raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:22:01Z", "elapsed": 588}
+[bf] +10m00s guesses=211 resends=4 errors=18 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:22:51Z", "elapsed": 638}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:22:51Z", "elapsed": 638}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:23:08Z", "elapsed": 655}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:23:08Z", "elapsed": 655}
+[bf] +11m00s guesses=224 resends=4 errors=20 found=False
+[bf] +12m00s guesses=244 resends=5 errors=20 found=False
+[bf] +13m00s guesses=271 resends=5 errors=20 found=False
+[bf] +14m00s guesses=296 resends=5 errors=20 found=False
+[bf] {"kind": "milestone", "w": 0, "last": "0185", "guesses": 300, "ts": "11:26:21Z", "elapsed": 848}
+[bf] +15m00s guesses=322 resends=5 errors=20 found=False
+[bf] +16m00s guesses=346 resends=5 errors=20 found=False
+[bf] +17m00s guesses=389 resends=6 errors=20 found=False
+[bf] {"kind": "milestone", "w": 1, "last": "5156", "guesses": 400, "ts": "11:29:24Z", "elapsed": 1031}
+[bf] +18m00s guesses=443 resends=6 errors=20 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:30:25Z", "elapsed": 1092}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:30:26Z", "elapsed": 1093}
+[bf] +19m00s guesses=465 resends=6 errors=22 found=False
+[bf] {"kind": "milestone", "w": 1, "last": "5207", "guesses": 500, "ts": "11:31:56Z", "elapsed": 1183}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:31:58Z", "elapsed": 1185}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:31:59Z", "elapsed": 1186}
+[bf] +20m00s guesses=501 resends=6 errors=24 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:32:31Z", "elapsed": 1218}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:32:32Z", "elapsed": 1219}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:33:03Z", "elapsed": 1250}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:33:05Z", "elapsed": 1252}
+[bf] +21m00s guesses=501 resends=6 errors=28 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:33:36Z", "elapsed": 1283}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:33:38Z", "elapsed": 1285}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:33:53Z", "elapsed": 1300}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:33:55Z", "elapsed": 1302}
+[bf] +22m00s guesses=501 resends=6 errors=30 found=False
+[bf] +23m00s guesses=501 resends=6 errors=30 found=False
+[bf] +24m00s guesses=501 resends=6 errors=30 found=False
+[bf] +25m00s guesses=501 resends=6 errors=30 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:37:13Z", "elapsed": 1500}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:37:14Z", "elapsed": 1501}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:37:29Z", "elapsed": 1516}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:37:31Z", "elapsed": 1518}
+[bf] +26m00s guesses=501 resends=6 errors=30 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:38:31Z", "elapsed": 1578}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:38:31Z", "elapsed": 1578}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:38:47Z", "elapsed": 1594}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:38:47Z", "elapsed": 1594}
+[bf] +27m00s guesses=504 resends=7 errors=30 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:40:08Z", "elapsed": 1675}
+[bf] +28m00s guesses=528 resends=7 errors=31 found=False
+[bf] +29m00s guesses=543 resends=7 errors=31 found=False
+[bf] +30m00s guesses=570 resends=7 errors=31 found=False
+[bf] +31m00s guesses=596 resends=7 errors=31 found=False
+[bf] {"kind": "milestone", "w": 0, "last": "0418", "guesses": 600, "ts": "11:43:19Z", "elapsed": 1866}
+[bf] +32m00s guesses=623 resends=7 errors=31 found=False
+[bf] +33m00s guesses=650 resends=7 errors=31 found=False
+[bf] +34m00s guesses=677 resends=7 errors=31 found=False
+[bf] {"kind": "milestone", "w": 0, "last": "0518", "guesses": 700, "ts": "11:47:04Z", "elapsed": 2091}
+[bf] +35m00s guesses=703 resends=7 errors=31 found=False
+[bf] +36m00s guesses=729 resends=7 errors=31 found=False
+[bf] +37m00s guesses=757 resends=8 errors=31 found=False
+[bf] {"kind": "milestone", "w": 1, "last": "5235", "guesses": 800, "ts": "11:50:00Z", "elapsed": 2267}
+[bf] +38m00s guesses=811 resends=8 errors=31 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:50:18Z", "elapsed": 2285}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:50:19Z", "elapsed": 2286}
+[bf] +39m00s guesses=835 resends=8 errors=33 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:51:23Z", "elapsed": 2350}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:51:23Z", "elapsed": 2350}
+[bf] +40m00s guesses=859 resends=8 errors=35 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:52:55Z", "elapsed": 2442}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:52:56Z", "elapsed": 2443}
+[bf] +41m00s guesses=895 resends=8 errors=37 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:53:28Z", "elapsed": 2475}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:53:29Z", "elapsed": 2476}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:53:47Z", "elapsed": 2493}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "11:54:00Z", "elapsed": 2507}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:54:03Z", "elapsed": 2510}
+[bf] +42m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:54:18Z", "elapsed": 2525}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:54:19Z", "elapsed": 2526}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:54:34Z", "elapsed": 2541}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:54:35Z", "elapsed": 2542}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:54:51Z", "elapsed": 2558}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:54:52Z", "elapsed": 2559}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:55:07Z", "elapsed": 2574}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:55:08Z", "elapsed": 2575}
+[bf] +43m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:55:23Z", "elapsed": 2590}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:55:24Z", "elapsed": 2591}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:55:40Z", "elapsed": 2607}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:55:40Z", "elapsed": 2607}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:55:56Z", "elapsed": 2623}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:55:56Z", "elapsed": 2623}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:56:12Z", "elapsed": 2639}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:56:13Z", "elapsed": 2639}
+[bf] +44m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:56:29Z", "elapsed": 2656}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:56:29Z", "elapsed": 2656}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:56:45Z", "elapsed": 2672}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:56:45Z", "elapsed": 2672}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:57:02Z", "elapsed": 2689}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:57:02Z", "elapsed": 2689}
+[bf] +45m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:57:18Z", "elapsed": 2705}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:57:18Z", "elapsed": 2705}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:57:34Z", "elapsed": 2721}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:57:34Z", "elapsed": 2721}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:57:51Z", "elapsed": 2738}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:57:51Z", "elapsed": 2738}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:58:07Z", "elapsed": 2754}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:58:07Z", "elapsed": 2754}
+[bf] +46m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:58:23Z", "elapsed": 2770}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:58:23Z", "elapsed": 2770}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:58:40Z", "elapsed": 2787}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:58:40Z", "elapsed": 2787}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:58:56Z", "elapsed": 2803}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:58:56Z", "elapsed": 2803}
+[bf] +47m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:59:13Z", "elapsed": 2820}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:59:13Z", "elapsed": 2820}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:59:29Z", "elapsed": 2836}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "11:59:29Z", "elapsed": 2836}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:59:46Z", "elapsed": 2853}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "11:59:46Z", "elapsed": 2853}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:00:02Z", "elapsed": 2869}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:00:02Z", "elapsed": 2869}
+[bf] +48m00s guesses=895 resends=8 errors=40 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:00:19Z", "elapsed": 2886}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:00:19Z", "elapsed": 2886}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:00:35Z", "elapsed": 2902}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:00:35Z", "elapsed": 2902}
+[bf] {"kind": "milestone", "w": 0, "last": "0651", "guesses": 900, "ts": "12:01:03Z", "elapsed": 2930}
+[bf] +49m00s guesses=903 resends=9 errors=40 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:01:22Z", "elapsed": 2949}
+[bf] +50m00s guesses=923 resends=10 errors=41 found=False
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:02:53Z", "elapsed": 3040}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:02:54Z", "elapsed": 3040}
+[bf] +51m00s guesses=956 resends=10 errors=43 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:03:26Z", "elapsed": 3073}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:03:28Z", "elapsed": 3075}
+[bf] +52m00s guesses=969 resends=10 errors=45 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:04:35Z", "elapsed": 3142}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:04:36Z", "elapsed": 3143}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:05:08Z", "elapsed": 3175}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:05:12Z", "elapsed": 3179}
+[bf] +53m00s guesses=988 resends=10 errors=49 found=False
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:05:26Z", "elapsed": 3193}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:05:42Z", "elapsed": 3209}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:05:45Z", "elapsed": 3212}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:05:59Z", "elapsed": 3226}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:06:02Z", "elapsed": 3229}
+[bf] +54m00s guesses=988 resends=10 errors=50 found=False
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:06:15Z", "elapsed": 3242}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:06:18Z", "elapsed": 3245}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:06:31Z", "elapsed": 3258}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:06:34Z", "elapsed": 3261}
+[bf] {"kind": "error", "w": 1, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:06:50Z", "elapsed": 3277}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:06:51Z", "elapsed": 3278}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:07:07Z", "elapsed": 3294}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:07:07Z", "elapsed": 3294}
+[bf] +55m00s guesses=988 resends=10 errors=50 found=False
+[bf] {"kind": "milestone", "w": 1, "last": "5344", "guesses": 1000, "ts": "12:07:50Z", "elapsed": 3337}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:07:52Z", "elapsed": 3339}
+[bf] +56m00s guesses=1000 resends=11 errors=51 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:08:25Z", "elapsed": 3372}
+[bf] +57m00s guesses=1008 resends=11 errors=52 found=False
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:09:26Z", "elapsed": 3433}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:09:59Z", "elapsed": 3466}
+[bf] +58m00s guesses=1013 resends=11 errors=54 found=False
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:10:27Z", "elapsed": 3494}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:11:04Z", "elapsed": 3531}
+[bf] +59m00s guesses=1027 resends=11 errors=55 found=False
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:11:21Z", "elapsed": 3548}
+[bf] +60m00s guesses=1027 resends=11 errors=55 found=False
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:12:16Z", "elapsed": 3603}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:12:27Z", "elapsed": 3614}
+[bf] {"kind": "error", "w": 0, "msg": "session restart: Expecting value: line 1 column 1 (char 0)", "ts": "12:12:32Z", "elapsed": 3619}
+[bf] {"kind": "error", "w": 1, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:12:44Z", "elapsed": 3631}
+[bf] {"kind": "error", "w": 0, "msg": "bad resend response http=200 raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>\r\n<meta http-equiv=\"CacheControl\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Conten", "ts": "12:12:48Z", "elapsed": 3635}
+[bf] +61m00s guesses=1032 resends=12 errors=55 found=False
+[bf] +62m00s guesses=1063 resends=13 errors=55 found=False
+[bf] {"kind": "milestone", "w": 0, "last": "0727", "guesses": 1100, "ts": "12:14:55Z", "elapsed": 3761}
+[bf] {"kind": "error", "w": 0, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:15:11Z", "elapsed": 3778}
+[bf] {"kind": "error", "w": 1, "msg": "guess exc JSONDecodeError: Expecting value: line 1 column 1 (char 0) raw=<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Expires\" content=\"-1\"/>", "ts": "12:15:12Z", "elapsed": 3779}
+[bf] +63m00s guesses=1113 resends=13 errors=57 found=False
+[bf] finished. success=False
