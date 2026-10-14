@@ -45,11 +45,31 @@ HTTP/2 200  (SendGrid edge serving the PoC page)
 ```
 
 ## Proof of control
-- Before: [paste curl + dig showing no A record]
-- After:  [paste curl + dig showing SendGrid IP + 200]
+Before the claim (captured 2026-10-14 UTC, full output in
+`evidence/dangling_cname_capture_2026-10-14.txt`):
+```
+$ dig +short CNAME biz.hubspot.com
+u6710732.wl233.sendgrid.net.
+
+$ dig +noall +answer +comments u6710732.wl233.sendgrid.net A
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49757
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+   (NOERROR with an empty ANSWER section = unclaimed SendGrid record)
+
+$ curl -i --max-time 10 https://biz.hubspot.com/
+   (exit code: 6 — no A record, nothing being served)
+```
+After the claim (steps 1–4 above):
+```
+$ dig +short A biz.hubspot.com
+<SendGrid edge IP>
+
+$ curl -i https://biz.hubspot.com/
+HTTP/2 200  (SendGrid edge serving poc/index.html — "PoC — biz.hubspot.com")
+```
 - Screenshot of SendGrid account showing `biz.hubspot.com` as an active
   Branded Sending Domain.
-- Hosted file: poc_index.html served at https://biz.hubspot.com/
+- Hosted file: `poc/index.html` served at https://biz.hubspot.com/
 
 ## Impact
 An attacker who re-claims the dangling SendGrid record controls the HTTP response

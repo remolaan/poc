@@ -1,0 +1,30 @@
+CSV export — live capture 2026-10-14 (online.s-pankki.fi, demo session)
+
+Endpoint (from app JS, evidence/15_app_csv_export_link_js.js):
+  GET /ebank/api/account/transactions/exportRangedTransactions.ds
+      ?accountId=<A>&fromDate=<DDMMYYYY>&toDate=<DDMMYYYY>&fileType=sba-CSV
+  (cbs.contextPath = /ebank; app uses fetch() -> blob -> download 'export.csv')
+
+Results (fresh session each run):
+  accountId=ACC1 (valid), range 01.01.2025-31.12.2025 (no tx in range)
+      -> 200 OK, 138 B, real CSV header row (evidence/12_...csv):
+         Kirjauspäivä;Maksupäivä;Summa;Tapahtumalaji;Maksaja;Saajan nimi;
+         Saajan tilinumero;Saajan BIC-tunnus;Viitenumero;Viesti;Arkistointitunnus
+         (posting date; payment date; amount; transaction type; payer;
+          RECIPIENT NAME; RECIPIENT IBAN; RECIPIENT BIC; reference; message; archive code)
+  accountId=ACC2 (valid), same range -> identical 138 B CSV header (account-keyed export works for both)
+  accountId=<64 x 0> (invalid), same range
+      -> 200 OK, 56249 B HTML error page (evidence/13_...html)  => validity oracle
+  accountId=ACC1 (valid), range 01.01.2026-31.10.2026 (contains tx)
+      -> 302 Found, Location: /ebank/account/processTransactionList.do
+      -> that page is the one-shot file processor; in the demo it serves the
+         1367 B "session closed" page (demo one-shot restriction, same
+         machinery as the session-kill finding). In production this step
+         streams the full CSV (all rows: dates, amounts, counterparty
+         names, IBANs, BICs, references, messages).
+
+Conclusion: the CSV export is accountId-keyed and unguarded (tokenless GET,
+no ownership check) — same IDOR as the PAD PDF report. The demo blocks the
+full row-stream (one-shot kill), but the header-only response for a valid
+accountId (138 B CSV) vs the 56 KB error page for an invalid one proves both
+the key handling and the oracle.

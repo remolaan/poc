@@ -1,0 +1,65 @@
+### TEST 1: fresh login
+home: HTTP/1.1 200 OK [] | closed? False
+
+### TEST 2: transaction fetch with VALID accountId (baseline)
+code=HTTP/1.1 200 OK len=56486 closed=False
+body-head:  Tilit&nbsp;|&nbsp;Verkkopankki | S-Pankki Hups! Javascripti ei ole aktivotu selaimessasi. Siirry suoraan sisltn Tm on demoversio verkkopankista Siirry etusivulle MAIJA MEIKLINEN Siirry Omiin tietoihin Kirjaudu ulos Etusivu Maksut Uusi maksu Siirto omalle tilille Erntyvt maksut Ulkomaan tilisiirto Valuuttakurssit Maksunsaajaluettelo E-lasku E-laskupalvelusopimus Tilit Omat tilit Tilitapahtumat Til
+
+### TEST 3: status poll with VALID accountId
+code=HTTP/1.1 500 Internal Server Error body={"ready":false}
+
+### TEST 4: transaction fetch WITHOUT accountId param
+code=HTTP/1.1 200 OK len=56486 closed=False body-head=' Tilit&nbsp;|&nbsp;Verkkopankki | S-Pankki Hups! Javascripti ei ole aktivotu selaimessasi. Siirry suoraan sisltn Tm on demoversio verkkopankista Siirry etusivulle MAIJA MEIKLINEN Siirry Omiin tietoihin Kirjaudu ulos Etusivu Maksut Uusi maksu Siirto omalle tilille Erntyvt maksut Ulkomaan tilisiirto V'
+
+### TEST 5: transaction fetch with INVALID accountId (0*32)
+code=HTTP/1.1 200 OK closed=False body-head=' Tilit&nbsp;|&nbsp;Verkkopankki | S-Pankki Hups! Javascripti ei ole aktivotu selaimessasi. Siirry suoraan sisltn Tm on demoversio verkkopankista Siirry etusivulle MAIJA MEIKLINEN Siirry Omiin tietoihin Kirjaudu ulos Etusivu Maksut Uusi maksu Siirto omalle tilille Erntyvt maksut Ulkomaan tilisiirto V'
+
+### TEST 6: session state after invalid accountId (overview.do)
+code=HTTP/1.1 200 OK closed=False body-head=' Verkkopankin yhteenveto&nbsp;|&nbsp;Verkkopankki | S-Pankki Hups! Javascripti ei ole aktivotu selaimessasi. Siirry suoraan sisltn Tm on demoversio verkkopankista Siirry etusivulle MAIJA MEIKLINEN Sii'
+### TEST 7: UNAUTHENTICATED (fresh empty jar) endpoint behavior
+fetchTransactionList (valid acc): code=HTTP/1.1 200 OK len=1361 loc=[] body-head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopa'
+jsonFetchTransactionListStatus: code=HTTP/1.1 500 Internal Server Error len=15 loc=[] body-head='{"ready":false}'
+showAccountDetails (valid acc): code=HTTP/1.1 200 OK len=1361 loc=[] body-head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopa'
+overview: code=HTTP/1.1 200 OK len=1361 loc=[] body-head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopa'
+initLogin: code=HTTP/1.1 200 OK len=44720 loc=[] body-head=' Tunnistautuminen Hups! Javascripti ei ole aktivotu selaimessasi. Siirry suoraan sisltn Suomi | Svenska Tarvitsetko apua? Poistu Tunnistautuminen --> --> Tunnus'
+### T1: fresh login cjX2
+home: HTTP/1.1 200 OK closed? False
+
+### T2: showAccountDetails VALID accountId (baseline: balance+txns page)
+code=HTTP/1.1 200 OK len=56437 closed=False
+has IBAN FI74390001000611? False
+
+### T3: showAccountDetails INVALID accountId (0*32)
+code=HTTP/1.1 200 OK len=1361 closed=True head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopankkia ei ole kytetty 15 minuuttiin. Kirj'
+
+### T4: session state after T3 (overview.do)
+code=HTTP/1.1 200 OK len=1361 closed=True head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopa'
+
+### T5: fresh login cjX3 -> showAccountDetails WITHOUT accountId
+code=HTTP/1.1 200 OK len=1361 closed=True head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopankkia ei ole kytetty 15 minuuttiin. Kirj'
+then overview: code=HTTP/1.1 200 OK closed=True
+
+### T6: piwik/log.do reflection probe (marker + XSS-ish)
+piwik response headers+body:
+
+### F1: fresh login cjX4
+home: HTTP/1.1 200 OK closed? False
+
+### F2: bare showAccountDetails.do — ZERO params, no referer (simulates <img> tag)
+code=HTTP/1.1 200 OK len=1361 closed=True
+kill response headers:
+HTTP/1.1 200 OK
+Connection: keep-alive
+Set-Cookie: JSESSIONID=BtrO8Abe9aQNVaTl6Qvgiik89tmv7tCzvIhA2EKr.61f95bdf23d9866b327e7e89e37627158fe8ba55; Secure; HttpOnly; path=/ebank; secure; HttpOnly; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:00 GMT; SameSite=None
+X-UA-Compatible: IE=11
+Content-Type: text/html; charset=ISO-8859-1
+Date: Wed, 14 Oct 2026 08:18:08 GMT
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Set-Cookie: TS01f76578=01c23de3b06d60f926de3a9fc8da9db54000db2bbc55fcf5abbec34d86cca9cb0829adc0989ed15c3dfcbc5429b6493fbcb9ed6c7d24343f18c8f5ed10cc2f0cee8f8b6945; Path=/
+Set-Cookie: TS01c60410=01c23de3b04d3c1e8b1eefa49c29d312ffd03f103355fcf5abbec34d86cca9cb0829adc098f0355b08fbc8d336a855e4bfb4bed085ca23349d279ace25ec31f5dd87a1892df3b61dcefb93773b80be14b00f8dd5965677efd79b49f6df7a3e29911b57d4d9; path=/ebank
+Transfer-Encoding: chunked
+
+
+
+### F3: session state (overview.do)
+code=HTTP/1.1 200 OK closed=True head=' S-Pankki - Verkkopankin yhteys on suljettu Verkkopankin yhteys on suljettu Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyist, koska verkkopa'

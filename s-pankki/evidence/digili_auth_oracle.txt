@@ -1,0 +1,3 @@
+{"message":"Missing Authentication Token"}
+{"message":"Invalid key=value pair (missing equal-sign) in Authorization header (hashed with SHA-256 and encoded with Base64): 'uTem/WB082UJMN2ajD6lH6UChGpTAddMJSx2iu923No='."}
+{"message":"Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. (Hashed with SHA-256 and encoded with Base64) Authorization=H/qLwvoZlkNuasLuhl4PU/YR3bYsYlSe/MgaOdVnvF4="}

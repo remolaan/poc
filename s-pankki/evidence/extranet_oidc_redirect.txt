@@ -1,0 +1,23 @@
+HTTP/1.1 302 Found
+Date: Wed, 14 Oct 2026 08:16:31 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+Set-Cookie: AWSALB=hFfijxpaB0v9WlLfP/BP5niqiAmX1FUHY5jctDsnf6jQXJBeURzkj1GR7XkGxLU1qmV0BN+gxGhbtJKOITawVudNRMAwO1GSJFPcj5QdCj7D0v9bSzPnEtKGVkkD; Secure; HttpOnly; Expires=Wed, 21 Oct 2026 08:16:31 GMT; Path=/; SameSite=None
+Set-Cookie: AWSALBCORS=hFfijxpaB0v9WlLfP/BP5niqiAmX1FUHY5jctDsnf6jQXJBeURzkj1GR7XkGxLU1qmV0BN+gxGhbtJKOITawVudNRMAwO1GSJFPcj5QdCj7D0v9bSzPnEtKGVkkD; Secure; HttpOnly; Expires=Wed, 21 Oct 2026 08:16:31 GMT; Path=/; SameSite=None; Secure; SameSite=None
+Expires: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Set-Cookie: JSESSIONID=3IsN-5yiwUOVJiIfzKHxqloW9s8tgjQS2akC8QB3.18b3e699946258bafeb9370a17e4af02c2afe4d4; Secure; HttpOnly; path=/extranet; SameSite=None
+X-XSS-Protection: 1; mode=block
+Pragma: no-cache
+X-Frame-Options: DENY
+Location: https://online.s-pankki.fi/ftn/authorize?scope=openid+ftn_hetu&response_type=code&client_id=CTkG1dRfFIFrlzh_SEAXkE1oMeBBMGEE7881Zlvsx7Q&redirect_uri=https://extranet.s-pankki.fi/extranet/callback&state=357e06d4-cf3f-4108-8f6a-a662b1599d28&nonce=a414a0f0-16dc-4861-a8ff-9d111952c546&acr_values=http://ftn.ficora.fi/2017/loa2&claims=%7B%22id_token%22:%7B%22urn:oid:1.2.246.21%22:%7B%22essential%22:true%7D%7D%7D&ui_locales=fi
+Access-Control-Expose-Headers: Server-Timing
+Server-Timing: traceparent;desc="00-97bb4fa39d7c927afcea155122b9d7bf-5b86e58413414435-03"
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Content-Language: fi-FI
+Set-Cookie: keycross=!62kTO8QogZpus8JScJrTWGwYpxKUKcIDeM/FHXzFRswU13/6kdfFEc30wWB4w3xKmDY/yLREG+T4Ug==; Secure; HttpOnly; path=/; Httponly; Secure; SameSite=None
+Set-Cookie: TS01355889=01c23de3b02c62997781833aab2bf32272ddab974de1ebab194bc4dd2f08ccb10c22380520b66c6dc15671be3cd073fffeb1eec4ab4fc9d7e53803752647d665b636080073d76b03b27826fc58725652067eef606c6b090f00b9bd1cd183d200828b8afd85; Path=/
+Set-Cookie: TS01ed4e20=01c23de3b046ce57bbdc3221ad754d5be665edcc12e1ebab194bc4dd2f08ccb10c223805202cec72c236b3484c5beea283d5fb04096a69ebee4b9ce84733398abc68c586d9; path=/extranet
+

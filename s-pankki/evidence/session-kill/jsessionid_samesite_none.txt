@@ -1,0 +1,6 @@
+# JSESSIONID cookie attributes observed across responses (online.s-pankki.fi)
+## kill response (Set-Cookie expires the session cookie, SameSite=None):
+Set-Cookie: JSESSIONID=L6zrmyKco1Z9jOXKfXZ7-BES6yRFpWSwuY52O_s4.61f95bdf23d9866b327e7e89e37627158fe8ba55; Secure; HttpOnly; path=/ebank; secure; HttpOnly; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:00 GMT; SameSite=None
+
+## normal response: Set-Cookie: JSESSIONID=upb-jgh3ew-...; Secure; HttpOnly; path=/ebank; secure; HttpOnly; SameSite=None
+   (full headers: status_poll_unauth_500_json.txt, extranet_oidc_redirect.txt)

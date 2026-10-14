@@ -1,0 +1,38 @@
+# F2: GET /ebank/accountview/showAccountDetails.do (ZERO params, no Referer) - session was alive before this request
+HTTP/1.1 200 OK
+Connection: keep-alive
+Set-Cookie: JSESSIONID=L6zrmyKco1Z9jOXKfXZ7-BES6yRFpWSwuY52O_s4.61f95bdf23d9866b327e7e89e37627158fe8ba55; Secure; HttpOnly; path=/ebank; secure; HttpOnly; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:00 GMT; SameSite=None
+X-UA-Compatible: IE=11
+Content-Type: text/html; charset=ISO-8859-1
+Date: Wed, 14 Oct 2026 08:18:09 GMT
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Set-Cookie: TS01f76578=01c23de3b06d60f926de3a9fc8da9db54000db2bbc55fcf5abbec34d86cca9cb0829adc0989ed15c3dfcbc5429b6493fbcb9ed6c7d24343f18c8f5ed10cc2f0cee8f8b6945; Path=/
+Set-Cookie: TS01c60410=01c23de3b0c9f9960eef37da1e927d4f14a430f0ff55fcf5abbec34d86cca9cb0829adc098f0355b08fbc8d336a855e4bfb4bed085904c243ca419470f56d5720e2ef7b8ed14aebd680abe173bdba25e83b0cf8e2ec46ee3c01c7267648cb5d19927630058; path=/ebank
+Transfer-Encoding: chunked
+
+
+### body (1361 bytes):
+<html>
+<head>
+	<title>S-Pankki - Verkkopankin yhteys on suljettu</title>
+	<script src="/theme/js/windowsUtils.js?version=RC-release-2026.10-20261007212654EEST-b475bec2" type="text/javascript"></script>
+</head>
+   </body> 
+<script type="text/javascript">
+        top.location.href='/ebank/auth/initLogin.do?status=1&origin=3';
+       </script>
+    <body onload="top.location.href='/ebank/auth/initLogin.do?status=1&amp;origin=3&authOrigin=';">
+	<noscript>
+		<h2>Verkkopankin yhteys on suljettu</h2>Yhteytesi S-Pankin Internet-palveluun on katkaistu turvallisuussyistä, koska verkkopankkia ei ole käytetty 15 minuuttiin.<br><br><a href="auth/initLogin.do?language=1" target="_top"><strong>Kirjaudu uudelleen palveluun </strong></noscript>
+	<div class="display-in-dialog fi" style="display:none;">
+		<div class="head"><h1 class="fi popupTitle">Verkkopankin yhteys on suljettu</h1></div>
+		<p>Verkkopankin istunto on suljettu turvallisuussyistä.</p>
+		<p><a class="icon fwd" href="auth/initLogin.do?language=1">Kirjaudu uudelleen palveluun</a></p>
+	</div>
+	<div class="display-in-dialog sv" style="display:none;">
+		<div class="head"><h1 class="sv popupTitle">Sessionen har stängts</h1></div>
+		<p>Sessionen har stängts eller ett fel har uppstått.</p>
+		<p><a class="icon fwd" href="auth/initLogin.do?language=1"> Tillbaka till login sidan</a></p>
+	</div>
+</body>
+</html>

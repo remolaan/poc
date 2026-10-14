@@ -1,0 +1,26 @@
+# GET /ebank/account/jsonFetchTransactionListStatus.do?accountId=<valid demo accountId>
+# Sent with FRESH EMPTY cookie jar (no login at all)
+## headers:
+HTTP/1.1 500 Internal Server Error
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Cache-Control: private,no-cache,no-store,must-revalidate
+Cache-Control: private,no-cache,no-store
+Cache-Control: no-cache
+Set-Cookie: JSESSIONID=upb-jgh3ew-zeeCZT2MWA7vQpHYAQ1RTCi2wSPpN.0760c0547f06e5d49de6a088b9f4c2a266b7853c; Secure; HttpOnly; path=/ebank; secure; HttpOnly; SameSite=None
+X-XSS-Protection: 1; mode=block
+X-UA-Compatible: IE=11
+Pragma: no-cache
+Content-Security-Policy: connect-src 'self' http://localhost:* https://*.crosskey.fi http://*.crosskey.fi https://*.s-pankki.fi https://*.boost.ai https://*.front.ai https://*.usercentrics.eu https://digitalpin-web.gemalto.com; frame-ancestors 'self' http://*.crosskey.fi https://*.crosskey.fi https://*.s-pankki.fi; frame-src 'self' https://*.s-pankki.fi https://*.posti.fi https://*.itella.fi https://*.netposti.fi https://*.youtube.com https://dreambroker.com https://*.dreambroker.com https://*.gemalto.com https://*.usercentrics.eu; report-uri /ebank/auth/logCSPViolation.do; object-src 'self'; script-src 'self' https://*.crosskey.fi https://*.s-pankki.fi https://*.boost.ai https://*.front.ai http://localhost:* https://*.usercentrics.eu http://*.usercentrics.eu https://digitalpin-web.gemalto.com 'unsafe-inline' 'unsafe-eval'
+Date: Wed, 14 Oct 2026 08:14:47 GMT
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=ISO-8859-1
+Access-Control-Allow-Methods: GET,POST,OPTIONS,PUT,DELETE
+Set-Cookie: keycross=!ejAq95ZMjtTIvztScJrTWGwYpxKUKbqtNaD0sNGD6EFjdjrbQk2QVZXVoaOBi94EdQvK6yivpTlv2g==; Secure; HttpOnly; path=/; Httponly; Secure; SameSite=None
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Set-Cookie: TS01f76578=01c23de3b055379747dcd6346e3545f38188d1b928bd18d088a0bdd50ea287ea602752e421998a929ed9b016f6ed23b8201a8336eea529cf871ff8769a612a199e3cfd58a2; Path=/
+Set-Cookie: TS01c60410=01c23de3b093eacfaf9ae09fcfac94a7598f824944bd18d088a0bdd50ea287ea602752e421a3e0cdbb24c16608965d845017d9c0ccfce31feda1b8c84bd10b976a2064360a; path=/ebank
+Transfer-Encoding: chunked
+
+## body:
+{"ready":false}

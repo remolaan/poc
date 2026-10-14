@@ -1,0 +1,108 @@
+# Dangling CNAME evidence capture — 2026-10-14 (UTC)
+Captured from: research environment (dig 9.x, curl 8.5)
+
+===================================================================
+## biz.hubspot.com
+===================================================================
+
+$ dig biz.hubspot.com
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> biz.hubspot.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48807
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;biz.hubspot.com.		IN	A
+
+;; ANSWER SECTION:
+biz.hubspot.com.	207	IN	CNAME	u6710732.wl233.sendgrid.net.
+
+;; AUTHORITY SECTION:
+wl233.sendgrid.net.	208	IN	SOA	aisha.ns.cloudflare.com. dns.cloudflare.com. 2417447318 10000 2400 604800 1800
+
+;; Query time: 1 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Wed Oct 14 07:44:26 UTC 2026
+;; MSG SIZE  rcvd: 145
+
+
+$ dig +short CNAME biz.hubspot.com
+u6710732.wl233.sendgrid.net.
+
+===================================================================
+## workshop.hubspot.com
+===================================================================
+
+$ dig workshop.hubspot.com
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> workshop.hubspot.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10247
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;workshop.hubspot.com.		IN	A
+
+;; ANSWER SECTION:
+workshop.hubspot.com.	207	IN	CNAME	u22944788.wl039.sendgrid.net.
+
+;; AUTHORITY SECTION:
+wl039.sendgrid.net.	207	IN	SOA	aisha.ns.cloudflare.com. dns.cloudflare.com. 2417448464 10000 2400 604800 1800
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Wed Oct 14 07:44:26 UTC 2026
+;; MSG SIZE  rcvd: 151
+
+
+$ dig +short CNAME workshop.hubspot.com
+u22944788.wl039.sendgrid.net.
+
+===================================================================
+## Targeted lookups of the SendGrid claim records (NOERROR, empty answer = dangling)
+===================================================================
+
+$ dig +noall +answer +comments u6710732.wl233.sendgrid.net A
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49757
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+
+$ dig +noall +answer +comments u22944788.wl039.sendgrid.net A
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 13919
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+
+===================================================================
+## sendgrid.net parent zone is alive (NS delegation present)
+===================================================================
+
+$ dig +short NS sendgrid.net
+ns14.dnsmadeeasy.com.
+ns10.dnsmadeeasy.com.
+ns12.dnsmadeeasy.com.
+ns13.dnsmadeeasy.com.
+ns15.dnsmadeeasy.com.
+ns11.dnsmadeeasy.com.
+
+===================================================================
+## Connectivity check: hosts resolve to no IP (curl cannot connect)
+===================================================================
+
+$ curl -i --max-time 10 https://biz.hubspot.com/
+  (exit code: 6)
+
+$ curl -i --max-time 10 https://workshop.hubspot.com/
+  (exit code: 6)
